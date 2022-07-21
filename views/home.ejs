@@ -7,23 +7,29 @@
     <% let rootDir = './' %>
     <%- include(rootDir + 'partials/head.ejs') %>
     <link rel="stylesheet" href="/components/home/home.css">
+    <link rel="stylesheet" href="/components/works/works-filter.css">
+    <link rel="stylesheet" href="/components/works/works-showcase.css">
     <title>Kenneth Wong</title>
 </head>
 
 <body>
     <!-- navbar -->
+    <div id="curr-page"><%= page %></div>
     <%- include(rootDir + 'partials/navbar.ejs') %>
 
     <!-- banner -->
     <%- include(rootDir + 'components/home-banner.ejs') %>
 
-    <!-- works-grid -->
-    <%- include(rootDir + 'components/home-banner.ejs') %>
+    <!-- filter -->
+    <%- include(rootDir + 'components/works-filter.ejs') %>
+    <!-- works-showcase -->
+    <%- include(rootDir + 'components/works-showcase.ejs') %>
 
     <!-- footer -->
     <%- include(rootDir + 'partials/footer.ejs') %>
 
     <!-- script -->
-    <!-- <script src= "./components/common/style.js"></script> -->
+    <script src= "./components/works/work-list.js"></script>
+    <script src= "./components/works/works-showcase.js"></script>
 </body>
 </html>

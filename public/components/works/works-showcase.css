@@ -1,0 +1,84 @@
+/* grid */
+.section.grid #works-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: .8rem;
+    margin: 1.5rem 0 8.5rem;
+}
+.section.grid .card {
+    display: block;
+    /* aspect-ratio: 1/1; */
+    border-radius: 5px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.15); 
+    background-size: cover;    
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.section.grid .card .mask {
+    position: relative; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%; 
+    background-color:rgba(0, 0, 0, .6);
+    opacity: 0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity ease-out 300ms;
+    cursor: pointer;
+}
+.section.grid .card .mask:hover {
+    opacity: 1;
+    transition: opacity ease-in 100ms;
+}
+.section.grid .mask .title {
+    color: rgba(255, 255, 255, .9);
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0 .5rem;
+}
+.section.grid .mask .description {
+    color: rgba(255, 255, 255, .8);
+    font-size: .9rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: .5rem;
+    padding: 0 .5rem;
+}
+
+
+@media (max-width: 576px) {
+    /* grid */
+    .section.grid #works-showcase-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+        margin: 1.5rem .5rem 4.5rem;
+    }
+    .section.grid .mask .title {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    /* grid */
+    .section.grid #works-showcase-grid {
+        grid-template-columns: 1fr 1fr;
+        margin: 1.5rem 2.5rem 6.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    /* grid */
+    .section.grid #works-showcase-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 1.5rem 1.5rem 8.5rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    /* grid */
+    .section.grid #works-showcase-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 1.5rem 1.5rem 8.5rem;
+    }
+}

@@ -1,3 +1,8 @@
+/* get page */
+#curr-page {
+    display: none;
+}
+
 header {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -41,6 +46,9 @@ header .cat:hover {
     color: #000000; */
     border-bottom: 1px solid rgba(0, 0, 0, .4);
     transition: all .05s ease-in;
+}
+header .cat.current-page {
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
 }
 
 header .sub-cat, header .sub-sub-cat {
@@ -182,6 +190,9 @@ header .content-constraint.nav .btn-login span {
         border-bottom: none;
         background-color: rgba(0, 0, 0, .1);
         transition: all .05s ease-in;
+    }
+    header .cat.current-page {
+        border-bottom: 1px solid rgba(0, 0, 0, 0);
     }
 
     header .cat, header .sub-cat, header .sub-cat.first, header .sub-cat.last, 

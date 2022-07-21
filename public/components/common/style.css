@@ -40,6 +40,9 @@ body {
 .section-content {
     width: 100%; max-width: 1050px;
 }
+.constraint {
+    margin: 0 7%;
+}
 
 .line-br {
     width: 100%; 

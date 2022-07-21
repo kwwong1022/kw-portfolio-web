@@ -29,3 +29,18 @@ function toggleNavbar() {
 window.onscroll = () => {
     this.scrollY > 20? header.classList.add('sticky'):header.classList.remove('sticky');
 }
+
+// get page
+const currPage = document.querySelector("#curr-page").innerHTML;
+// get all cats
+const pageCats = document.querySelectorAll(".cat");
+// if cats:
+if (pageCats) {
+    pageCats.forEach(pageCat => {
+        pageCat.classList.forEach(c => {
+            if (c == currPage) {
+                pageCat.classList.add("current-page");
+            }
+        })
+    })
+}
