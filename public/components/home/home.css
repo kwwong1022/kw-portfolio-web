@@ -8,3 +8,13 @@
 #first-section {
     margin-top: 970px;
 }
+
+.featured-works.section {
+    margin-bottom: 3rem;       
+}
+
+@media (max-width: 576px) {
+    .featured-works.section {
+        margin-bottom: 2rem;  
+    }
+}

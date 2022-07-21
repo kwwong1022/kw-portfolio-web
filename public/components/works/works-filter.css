@@ -2,10 +2,6 @@
     margin: 0;
 }
 
-.section.filter .section-content {
-    margin-top: 60px;
-}
-
 .section.filter .filter {
     font-size: 1rem;
     font-weight: 300;

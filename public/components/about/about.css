@@ -12,6 +12,7 @@
     grid-template-columns: 2fr 3fr;
     gap: 2rem;
     grid-template-areas: "img intro";
+    padding-inline: 2rem;
 }
 .section.about .container .intro {
     grid-area: intro;
@@ -47,6 +48,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
     gap: 1.5rem;
+    padding-inline: 2rem;
 }
 .section.skills .container.skills .skill{
     border-radius: 5px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
