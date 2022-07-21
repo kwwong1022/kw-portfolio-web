@@ -1,0 +1,79 @@
+html {
+    position: relative;
+    overflow-x: hidden;
+} 
+body {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+/* cv section */
+.section.cv {
+    position: absolute; 
+    top: 0; left: 0; 
+    z-index: 2; 
+    font-size: .9rem;
+    display: flex;
+    justify-content: center;
+}
+
+.section.cv .left-section {
+    transform: translateX(-100%); 
+    width: 40%;
+    min-height: 100vh;
+    padding: 6rem 3rem 0 0; 
+    background-color: rgb(228, 228, 228); 
+    display: flex;
+    /* display: flex; justify-content: right; */
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+}
+
+.section.cv .right-section {
+    transform: translateX(100%); 
+    width: 60%; 
+    min-height: 100vh; 
+    padding: 6rem 0 0; 
+    background-color: rgb(250, 250, 250); 
+    display: flex;
+    /* display: flex; justify-content: left; */
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+}
+
+.section.cv .left-section.show {
+    transform: translateX(0); 
+}
+.section.cv .right-section.show {
+    transform: translateX(0); 
+}
+
+#btn-show-cv {
+    display: flex;
+}
+
+.section .footer {
+    z-index: 2;
+}
+
+
+/* ==================================== responsive ==================================== */
+@media (max-width: 576px) {
+    /* cv section */
+    .section.cv {
+        display: none;
+    }
+    #btn-show-cv {
+        display: none;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    /* cv section */
+    .section.cv {
+        display: none;
+    }
+    #btn-show-cv {
+        display: none;
+    }
+}

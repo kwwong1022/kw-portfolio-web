@@ -65,7 +65,7 @@ btnCat.forEach(btn => {
 })
 
 // assign on touch event for each card
-let cards = document.querySelectorAll('.card');
+let cards = document.querySelectorAll('#works-showcase-grid .card');
 cards.forEach(c => {
     c.addEventListener('touchstart', () => {
         cards.forEach(c => c.firstElementChild.style.opacity = 0);
@@ -130,7 +130,7 @@ let showWorks = () => {
 }
 
 let updateCardSize = () => {
-    let currCards = document.querySelectorAll('.card');
+    let currCards = document.querySelectorAll('#works-showcase-grid .card');
     currCards.forEach(card => {
         card.style.height = `${card.clientWidth-card.style.paddingTop-card.style.paddingBottom}px`;
     })

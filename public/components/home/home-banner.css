@@ -1,6 +1,637 @@
 .home-banner {
     position: absolute;
     top: 0; left: 0;
-    width: 100%;
+    width: 100%; 
 }
 
+.home-banner .title {
+    width: 100%; 
+    margin-top: 50px; 
+    display: flex; 
+    justify-content: center;
+}
+.home-banner .title-content {
+    width: 100%; 
+    max-width: 1050px; 
+    margin-top: 120px; 
+    padding: 0 0 0 140px; 
+    font-size: 2.35rem; font-weight: 410;
+    text-align: left;
+}
+
+.home-banner .card-container {
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+}
+
+/* Card */
+.home-banner .card {
+    width: 100%; height: 420px; /* 420 */
+    max-width: 940px; 
+    margin: 55px 2rem 0; 
+    border-radius: 10px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(10px);
+}
+
+.home-banner .card nav {
+    width: 100%; 
+    margin: 2rem 15rem 0;
+}
+.home-banner .card .navbar {
+    display: flex; 
+    justify-content: space-between; 
+    font-size: .97rem;
+}
+.home-banner .card .navbar-br-line {
+    width: 100%; 
+    margin: 0 10rem; 
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+
+.home-banner .card .cat {
+    cursor: pointer;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: all .4s ease;
+}
+.home-banner .card .cat:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    transition: all .1s ease-in;
+}
+.home-banner .card .cat.active {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.home-banner .card .card-content {
+    display:flex; 
+    justify-content: center; 
+    height: 80%; 
+    padding: 2.5rem 6.5rem 2rem;
+}
+.home-banner .card .card-content-about {
+    display: none; 
+    justify-content: space-between; 
+    width: 100%; height: 100%; 
+}
+.home-banner .card .card-content-about.active, .home-banner .card .card-content-skills.active, .home-banner .card .card-content-featured-works.active, .home-banner .card .card-content-experience.active {
+    display: flex; 
+}
+
+/* Card - About */
+.home-banner .card .card-content-about {
+    align-items: center;
+}
+.home-banner .card-content-about .main-container-0 {
+    width: 100%; height: 100%; 
+    display: none; 
+    justify-content: center; align-items: center;
+}
+.home-banner .card-content-about .main-container-0 div {
+    width: 100%; height: 12.5rem; 
+    background-color: white; 
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+.home-banner .card-content-about .main-container-1 {
+    width: 65%; height: 100%; 
+    padding: .5rem 1rem 0 0;   /* ori: .7rem 2.5rem 0 0, about content */
+    line-height: 1.6; 
+    font-size: 15px;
+}
+
+.home-banner .card-content-about .main-container-1 .portal {
+    display: flex; 
+    justify-content: left; align-items: center; 
+    margin-top: 2rem;      /* ori: 2rem, about content */
+}
+.home-banner .card-content-about .main-container-2 {
+    width: 35%; height: 100%; 
+    display: flex; 
+    justify-content: center; align-items: center;
+    padding-bottom: 3rem;   /* about pic */
+}
+.home-banner .card-content-about .main-container-2 .kw-icon {
+    background-image: url("https://avatars.githubusercontent.com/u/67175089?v=4");
+    background-size: cover;
+    width: 11rem; 
+    height: 11rem; 
+    margin: 0 0 0 2rem; 
+    border-radius: 50%; 
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Card - Skills */
+.home-banner .card .card-content-skills {
+    display: none;
+    flex-direction: column;                                                 
+    justify-content: start; align-items: center; 
+    width: 100%; height: 100%;
+}
+.home-banner .card .card-content-skills .main-container-0, .home-banner .card .card-content-skills .main-container-1 {
+    width: 100%; 
+    font-size: 15px; 
+    flex-direction: column; 
+    justify-content: start; align-items: center;
+}
+.home-banner .card .card-content-skills .skills-icon-row-0 {
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 1rem; padding: 0 5rem 0;
+}
+.home-banner .card .card-content-skills .skills-icon-row-1, .home-banner .card .card-content-skills .skills-icon-row-2 {
+    width: 100%; 
+    display: none; 
+    justify-content: space-between;
+     margin-top: 1rem;
+}
+.icon-container {
+    width: 15%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; align-items: center;
+}
+.icon {
+    width: 50px; height: 50px; 
+    border-radius: 27.5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+.home-icon-info {
+    text-align: center; 
+    margin: .5rem 0 0;
+    font-size: 15px;
+}
+
+
+
+/* Card - featured works */
+.home-banner .card .card-content-featured-works {
+    display: none; 
+    /* justify-content: center;  */
+    width: 100%; height: 100%; 
+}
+.home-banner .card .card-content-featured-works .card-container {
+    display: flex; 
+    justify-content: center; align-items: center; 
+    width: 27%; height: 100%;
+}
+.home-banner .card .card-content-featured-works .card-container .sub-card {
+    text-decoration: none; 
+    color: rgb(0, 0, 0); 
+    width: 190px; height: 270px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 5px; 
+    display: flex; flex-direction: column; 
+    justify-content: space-between;
+    transition: all .1s ease;
+}
+.home-banner .card .card-content-featured-works .card-container .card-info-container {
+    height:55%; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 0 0 5px 5px; box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    transition: all .1s ease; 
+    display: flex; flex-direction: column; 
+    justify-content: space-between;
+}
+.home-banner .card .card-content-featured-works .card-container .card-info-container:hover {
+    height:55%; 
+    background-color: rgb(240, 240, 240); 
+    border-radius: 0 0 5px 5px; box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    transition: all .1s ease; 
+    display: flex; flex-direction: column; 
+    justify-content: space-between;
+}
+#featured-card-0, #featured-card-1, #featured-card-2 {
+    cursor: pointer;
+}
+.home-banner .card .card-content-featured-works .featured-container-col {
+    display: flex; 
+    justify-content: center; 
+    width: 100%; height: 100%;
+}
+.home-banner .card .card-content-featured-works .featured-container-row {
+    display: none; flex-direction: column;
+    justify-content: space-between; align-items: center;
+    width: 100%; height: 100%;
+    border-radius: 5px;
+}
+/* img */
+.card-img {
+    cursor: pointer;
+}
+/* featured - lg */
+.featured-container-col #featured-card-0 .card-img {
+    background-image: url("/assets/home/featured-img-0-lg.png");
+    background-size: cover;
+    background-position: center;
+}
+.featured-container-col #featured-card-1 .card-img {
+    background-image: url("/assets/home/featured-img-1-lg.png");
+    background-size: cover;
+    background-position: center;
+}
+.featured-container-col #featured-card-2 .card-img {
+    background-image: url("/assets/home/featured-img-2.png");
+    background-size: cover;
+    background-position: center;
+}
+/* - m */
+.featured-container-row #featured-card-0 .card-img {
+    background-image: url("/assets/home/featured-img-0-m.png");
+    background-size: cover;
+    background-position: center;
+}
+.featured-container-row #featured-card-1 .card-img {
+    background-image: url("/assets/home/featured-img-1-m.png");
+    background-size: cover;
+    background-position: center;
+}
+.featured-container-row #featured-card-2 .card-img {
+    background-image: url("/assets/home/featured-img-2.png");
+    background-size: cover;
+    background-position: center;
+}
+/* experience - lg */
+.experience-content-full #experience-card-0 .card-img {
+    background-image: url("/assets/home/experience-img-0-lg.png");
+    background-size: cover;
+    background-position: center;
+}
+.experience-content-full #experience-card-1 .card-img {
+    background-image: url("/assets/home/experience-img-1-lg.png");
+    background-size: cover;
+    background-position: center;
+}
+/* - m */
+.experience-content-half #experience-card-0 .card-img {
+    background-image: url("/assets/home/experience-img-0-lg.png");
+    background-size: cover;
+    background-position: center;
+}
+.experience-content-half #experience-card-1 .card-img {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-image: url("/assets/home/experience-img-1-lg.png");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Card - experience */
+.home-banner .card .card-content-experience {
+    display: none;  
+    width: 100%; height: 100%; 
+}
+.card-content-experience .experience-content-full {
+    width: 100%; height: 100%; 
+    display: flex; 
+    justify-content: space-between;
+}
+.card-content-experience .experience-content-half {
+    width: 100%; height: 100%; 
+    display: none; 
+    justify-content: space-between;
+}
+.experience-content-full #experience-card-0, .experience-content-full #experience-card-1 {
+    cursor: pointer;
+}
+.experience-content-half #experience-card-0, .experience-content-half #experience-card-1 {
+    cursor: pointer;
+    width: 49%; height: 200px; 
+    border-radius: 5px; box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); 
+    display: flex; flex-direction: column; 
+    justify-content: space-between;
+}
+.experience-content-full .card-img {
+    width: 40%; height: 100%;
+}
+.experience-content-full .card-info {
+    width: 60%; height: 100%; 
+    padding: 1rem 0 0 1rem; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 0 5px 5px 0;
+}
+.experience-content-full .card-info:hover {
+    background-color: rgb(240, 240, 240); 
+}
+.experience-content-half .card-img {
+    width: 100%; height: 45%;
+    border-radius: 5px 5px 0 0;
+}
+.experience-content-half .card-info {
+    width: 100%; height: 55%; 
+    padding: 1rem 0 0 1rem; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 0 0 5px 5px;
+}
+.experience-content-half .card-info:hover {
+    background-color: rgb(240, 240, 240); 
+}
+
+@media (max-width: 576px) {
+    .home-banner .title-content {
+        margin-top: 60px; 
+        padding: 0; 
+        font-size: 1.4rem; 
+        text-align: center;
+    }
+    /* Card */
+    .home-banner .card {
+        height: 580px;
+        margin: 55px 0 0;
+        border-radius: 0; 
+    }
+    .home-banner .card .card-content {
+        padding: 2.5rem 2rem 2rem;
+    }
+
+    .home-banner .card nav {
+        margin: 2rem 1.7rem 0;
+    }
+    .home-banner .card .navbar-br-line {
+        width: 100%; 
+        margin: 0 1rem; 
+        border-bottom: 1px solid rgba(0, 0, 0, .1)
+    }
+
+    /* Card - About */
+    .home-banner .card .card-content-about {
+        flex-direction: column;
+    }
+    .home-banner .card-content-about .main-container-0 {
+        width: 100%; height: 100%;
+        display: flex; 
+    }
+    .home-banner .card-content-about .main-container-0 div {
+        /* width: 60%; height: 8rem;  */
+        background-image: url("https://avatars.githubusercontent.com/u/67175089?v=4");
+        background-size: cover;
+        width: 7.5rem; 
+        height: 7.5rem; 
+        margin: 0 0 1rem; 
+        border-radius: 50%; 
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+    .home-banner .card-content-about .main-container-1 {
+        width: 95%; height: 100%; 
+        padding: 1rem .5rem 0 0; 
+        line-height: 1.6; 
+        font-size: 15px;
+        text-align: center;
+    }
+    .home-banner .card-content-about .main-container-1 .portal {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .home-banner .card-content-about .main-container-2 {
+        display: none; 
+    }
+
+    /* Card - Skills */
+    .home-banner .card .card-content-skills .main-container-0, .banner .card .card-content-skills .main-container-1 {
+        width: 100%; 
+        font-size: 15px; 
+        flex-direction: column; 
+        justify-content: start; align-items: center;
+    }
+    .home-banner .card .card-content-skills .skills-icon-row-0 {
+        width: 100%; 
+        display: none; 
+        justify-content: space-between;
+         margin-top: 1rem; padding: 0 0rem 0;
+    }
+    .home-banner .card .card-content-skills .skills-icon-row-1, .home-banner .card .card-content-skills .skills-icon-row-2 {
+        width: 100%; 
+        display: flex; 
+        justify-content: space-between;
+        margin-top: 1rem; padding: 0 4rem 0;
+    }
+    .icon-container {
+        width: 15%; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; align-items: center;
+    }
+    .icon {
+        width: 40px; height: 40px; 
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+    .icon-info {
+        text-align: center; 
+        margin: .5rem 0 0;
+        font-size: 13px;
+        padding-bottom: 0rem;
+    }
+    .home-banner .card .card-content-skills .skill-title {
+        margin-top: 1rem;
+    }
+
+    /* Card - Featured works */
+    .home-banner .card .card-content-featured-works .featured-container-col {
+        display: none; 
+    }
+    .home-banner .card .card-content-featured-works .featured-container-row {
+        display: flex;
+    }
+
+    /* Card - experience */
+    .card-content-experience .experience-content-full {
+        display: none; 
+    }
+    .card-content-experience .experience-content-half {
+        display: flex; 
+    }
+    .card-content-experience .experience-content-half #experience-card-0, .card-content-experience .experience-content-half #experience-card-1 {
+        height: 260px; 
+    }
+    .experience-content-half .card-img {
+        width: 100%; height: 50%;
+    }
+    .experience-content-half .card-info {
+        width: 100%; height: 50%; 
+        padding: 1rem .5rem 1rem; 
+        background-color: rgb(255, 255, 255); 
+        border-radius: 0 5px 5px 0;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .home-banner .title-content {
+        margin-top: 120px; 
+        padding: 0; 
+        font-size: 2.15rem; 
+        text-align: center;
+    }
+    .banner-divider {
+        top: 50px;
+    }
+
+    .home-banner .card {
+        height: 500px;
+    }
+    .home-banner .card .card-content {
+        padding: 2.5rem 3.5rem 2rem;
+    }
+    .home-banner .card nav {
+        margin: 2rem 5rem 0;
+    }
+    .home-banner .card .navbar-br-line {
+        width: 100%; 
+        margin: 0 3rem; 
+        border-bottom: 1px solid rgba(0, 0, 0, .1)
+    }
+    
+    /* Card - About */
+    .home-banner .card .card-content-about {
+        flex-direction: column;
+    }
+    .home-banner .card-content-about .main-container-0 {
+        width: 100%; height: 100%;
+        display: flex; 
+        /* display: none; */
+    }
+    .home-banner .card-content-about .main-container-0 div {
+        /* width: 60%; height: 8rem;  */
+        background-image: url("https://avatars.githubusercontent.com/u/67175089?v=4");
+        background-size: cover;
+        width: 6.5rem; 
+        height: 6.5rem; 
+        margin: 0 0 .5rem; 
+        border-radius: 50%; 
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+    .home-banner .card-content-about .main-container-1 {
+        width: 95%; height: 100%; 
+        padding: 1rem .5rem 0 0; 
+        line-height: 1.6; 
+        font-size: 15px;
+        text-align: center;
+    }
+    .home-banner .card-content-about .main-container-1 .portal {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    .home-banner .card-content-about .main-container-2 {
+        display: none; 
+    }
+
+    /* Card - Skills */
+    .home-banner .card .card-content-skills .main-container-0, .home-banner .card .card-content-skills .main-container-1 {
+        width: 100%; 
+        font-size: 15px; 
+        flex-direction: column; 
+        justify-content: start; align-items: center;
+        margin-top: 1rem;
+    }
+    .home-banner .card .card-content-skills .skills-icon-row-0 {
+        display: flex; 
+        justify-content: space-between;
+         margin-top: 1rem; padding: 0 2rem 0;
+    }
+    .icon-container {
+        width: 15%; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; align-items: center;
+    }
+    .icon {
+        width: 45px; height: 45px; 
+        border-radius: 27.5px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+    .icon-info {
+        text-align: center; 
+        margin: .5rem 0 0;
+        font-size: 14px;
+    }
+
+    /* Card - Featured works */
+    .home-banner .card .card-content-featured-works .featured-container-col {
+        display: none;
+    }
+    .home-banner .card .card-content-featured-works .featured-container-row {
+        display: flex;
+    }
+
+    /* Card - experience */
+    .card-content-experience .experience-content-full {
+        display: none; 
+    }
+    .card-content-experience .experience-content-half {
+        display: flex; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .home-banner .title-content {
+        margin-top: 120px; 
+        padding: 0 0 0 80px; 
+        font-size: 2.35rem; 
+        text-align: left;
+    }
+
+    .home-banner .card .card-content {
+        padding: 2.5rem 5.5rem 2rem;
+    }
+    .home-banner .card nav {
+        margin: 2rem 7rem 0;
+    }
+    .home-banner .card .navbar-br-line {
+        width: 100%; 
+        margin: 0 3rem; 
+        border-bottom: 1px solid rgba(0, 0, 0, .1)
+    }
+
+    .home-banner .card-content-about .main-container-2 .kw-icon {
+        background-image: url("https://avatars.githubusercontent.com/u/67175089?v=4");
+        background-size: cover;
+        width: 11.5rem; 
+        height: 11.5rem; 
+        margin: 0 0 0 1rem; 
+        border-radius: 50%; 
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Card - Skills */
+    .home-banner .card .card-content-skills .main-container-0, .home-banner .card .card-content-skills .main-container-1 {
+        width: 100%; 
+        font-size: 15px; 
+        flex-direction: column; 
+        justify-content: start; align-items: center;
+    }
+    .home-banner .card .card-content-skills .skills-icon-row-0 {
+        display: flex; 
+        justify-content: space-between;
+         margin-top: 1rem; padding: 0 3rem 0;
+    }
+    .icon-container {
+        width: 15%; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; align-items: center;
+    }
+    .icon {
+        width: 45px; height: 45px; 
+        border-radius: 27.5px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+    .icon-info {
+        text-align: center; 
+        margin: .5rem 0 0;
+        font-size: 14px;
+    }
+
+    /* Card - Featured works */
+    .home-banner .card .card-content-featured-works .card-container {
+        display: flex; 
+        justify-content: center; align-items: center; 
+        width: 32%; height: 100%;
+    }
+    .home-banner .card .card-content-featured-works .featured-container-col {
+        justify-content: space-between; 
+        width: 100%; height: 100%;
+    }
+}

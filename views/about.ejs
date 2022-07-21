@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <% let rootDir = './' %>
     <%- include(rootDir + 'partials/head.ejs') %>
-    <link rel="stylesheet" href="/components/home/home.css">
+    <link rel="stylesheet" href="/components/about/about.css">
+    <link rel="stylesheet" href="/components/about/about-cv-slide.css">
     <title>Kenneth Wong - About</title>
 </head>
 
@@ -15,12 +16,162 @@
     <div id="curr-page"><%= page %></div>
     <%- include(rootDir + 'partials/navbar.ejs') %>
 
+    <!-- banner sketch here: -->
+    <div id="about-banner-sketch" class="sketch fade-in"></div>
 
+    <!-- about: -->
+    <div class="section about">
+        <div class="section-content">
+            <div class="container">
+                <div class="intro fade-in from-right"><br>
+                    <div style="font-size: 1.35rem; font-weight: 400;">Hello! I am Kenneth Wong</div>
+                    <div style="font-size: .95rem; font-weight: 400; margin-top: 1rem;">
+                        <p>Kenneth Wong is a final year student with a BAS degree in New Media from the City University of Hong Kong. He got the award dean's list with honors and discovered his interest in front-end development and programming during university.</p><br>
+                        <p>Wong is dedicated to his web & mobile front-end development pursuits and has learned various popular frameworks and tools such as React, Express, p5 and implemented them into projects.</p>
+                    </div>
+                    <div class="portals">
+                        <a href="https://www.linkedin.com/in/kai-fung-wong-50b7691b4/" target="_blank">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>&nbsp&nbsp&nbsp
+                        <a href="https://github.com/kwwong1022" target="_blank">
+                            <i class="fab fa-github-square fa-lg"></i>
+                        </a>&nbsp&nbsp&nbsp
+                        <a href="mailto:kaifwong1022@gmail.com">
+                            <i class="fas fa-envelope-square fa-lg"></i>
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="img-container fade-in">
+                    <img src="/assets/kw-icon.jpeg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- skills: -->
+    <div class="section skills">
+        <div class="section-content">
+            <div style="border-bottom: rgba(0, 0, 0, 0.15) solid 1px;"></div>
+            <div style="text-align: center; margin: 3rem 0 0; font-size: 1.4rem; font-weight: 400;">Skills</div>
+            <div style="text-align: center; margin: .5rem 0 4rem; font-size: 1rem; font-weight: 400;">The skills I am familiar with</div>
+            <!-- skills -->
+            <div style="display: flex; justify-content: center;">
+                <div class="container skills" style="width: 100%; max-width: 900px;">
+                    <div class="skill fade-in from-left">
+                        <a href="#">
+                            <div class="img-container">
+                                <img src="/assets/about/skill-web.png" style="width: 4rem; margin: .8rem 0 .5rem; opacity: 90%;">
+                            </div>
+                            <div class="title">Web Front-end Development</div>
+                        </a>
+                    </div>
+                    <div class="skill fade-in from-left">
+                        <a href="#">
+                            <div class="img-container">
+                                <img src="/assets/about/skill-android.png" style="width: 4rem; margin: .8rem 0 .5rem; opacity: 90%;">
+                            </div>
+                            <div class="title">Android Front-end Development</div>
+                        </a>    
+                    </div>  
+                    <div class="skill fade-in from-right">
+                        <a href="#">
+                            <div class="img-container">
+                                <img src="/assets/about/skill-uiux.png" style="width: 4rem; margin: .8rem 0 .5rem; opacity: 90%;">
+                            </div>
+                            <div class="title">UI/ UX, Layout Design<br></div>
+                        </a>
+                    </div>
+                    <div class="skill fade-in from-right">
+                        <a href="#">
+                            <div class="img-container">
+                                <img src="/assets/about/skill-modelling.png" style="width: 4rem; margin: .8rem 0 .5rem;">
+                            </div>
+                            <div class="title">3D Modelling<br></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- software & frameworks -->
+            <div style="display: flex; justify-content: center;"></div>
+        </div>
+    </div>
+    
+    <!-- education: -->
+    <div class="section education">
+        <div class="section-content">
+            <div style="border-bottom: rgba(0, 0, 0, 0.15) solid 1px;"></div>
+            <div style="text-align: center; margin: 3rem 0 0; font-size: 1.4rem; font-weight: 400;">Education</div>
+            <!-- <div style="text-align: center; margin: .5rem 0 4rem; font-size: 1rem; font-weight: 400;">Lorem ipsum dolor sit</div> --><div style="margin: 4rem 0 0;"></div>
+
+            <div class="college fade-in">
+                <img class="img" src="/assets/about/education-cityu.png">
+                <div style="min-width: 1px; margin-right: 1rem; background-color: black;"></div>
+                <div>
+                    <span style="font-weight: 400; font-size: 1rem;">City University of Hong Kong, Bachelor of Arts and Science in New Media (BAS)</span><br>
+                    <span style="line-height: 2rem; font-size: .95rem;">Sept 2020 - Present</span><br>
+                    <span style="font-size: .95rem; color: rgba(0, 0, 0, 0.6);">First class honours, with awards dean's list (semester B 2020 - 2021, semester A 2021 - 2022)</span>
+                </div>
+            </div>
+
+            <div class="college uow fade-in">
+                <img class="img" src="/assets/about/education-uow.png">
+                <div style="min-width: 1px; margin-right: 1rem; background-color: black;"></div>
+                <div>
+                    <span style="font-weight: 400; font-size: 1rem;">UOW College, Associate of Science in Creative and Interactive Media Production, Intermedia/Multimedia</span><br>
+                    <span style="line-height: 2rem; font-size: .95rem;">Sept 2018 - July 2020</span><br>
+                    <span style="font-size: .95rem; color: rgba(0, 0, 0, 0.6);">With distinction</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- work experience: -->
+    <div class="section work-experience">
+        <div class="section-content">
+            <div style="border-bottom: rgba(0, 0, 0, 0.15) solid 1px;"></div>
+            <div style="text-align: center; margin: 3rem 0 0; font-size: 1.4rem; font-weight: 400;">Work Experience</div>
+            <!-- <div style="text-align: center; margin: .5rem 0 4rem; font-size: 1rem; font-weight: 400;">Lorem ipsum dolor sit</div> --><div style="margin: 4rem 0 0;"></div>
+            
+            <div class="work fade-in" style="margin-top: 1rem;">
+                <img class="img" src="/assets/about/work-deloitte.png">
+                <div style="min-width: 1px; margin-right: 1rem; background-color: black;"></div>
+                <div>
+                    <span style="font-weight: 400; font-size: 1rem;">Deloitte - Intern - Digital - Customer & Marketing - Consulting</span><br>
+                    <span style="line-height: 2rem; font-size: .95rem;">June 2022 - Present</span><br>
+                </div>
+            </div>
+
+            <div class="work fade-in" style="margin-top: 2rem;">
+                <img class="img" src="/assets/about/work-bts.png">
+                <div style="min-width: 1px; margin-right: 1rem; background-color: black;"></div>
+                <div>
+                    <span style="font-weight: 400; font-size: 1rem;">Binary Tree Studio - Game UI Design</span><br>
+                    <span style="line-height: 2rem; font-size: .95rem;">Feb 2021 - Apr 2021</span><br>
+                </div>
+            </div>
+
+            <div class="work fade-in" style="margin-top: 2rem;">
+                <img class="img" src="/assets/about/work-wkk.png">
+                <div style="min-width: 1px; margin-right: 1rem; background-color: black;"></div>
+                <div>
+                    <span style="font-weight: 400; font-size: 1rem;">Wan Kau Kee - Brand Logo Design, Graphic Design</span><br>
+                    <span style="line-height: 2rem; font-size: .95rem;">May 2018 - Oct 2018</span><br>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- cv-slide -->
+    <%- include(rootDir + 'components/about-cv-slide.ejs') %>
 
     <!-- footer -->
     <%- include(rootDir + 'partials/footer.ejs') %>
 
     <!-- script -->
-    <!-- <script src= "./components/common/style.js"></script> -->
+    <script src= "./components/about/about-cv-slide.js"></script>
+    <script src= "./components/about/about-banner-sketch.js"></script>
 </body>
 </html>
