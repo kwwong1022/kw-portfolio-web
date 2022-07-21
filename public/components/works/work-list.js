@@ -1,18 +1,10 @@
 let workList = [
-    // {
-    //     title: "Sport Training App (work in progress)",
-    //     description: "Web-app, GPX, Data, Sport Training",
-    //     image: [""],
-    //     category: "tool",
-    //     url: "/tools/sport-training",
-    //     date: {year: 2022, month: 6}
-    // },
     {
         title: "GPX Visuzlization",
         description: "GPX file to Zwift Info Card Video",
         image: ["/assets/works/work-gpx-visualization.png"],
         category: "tool",
-        url: "/tools/sport-training/gpx-visualization",
+        url: "#",
         date: {year: 2022, month: 6}
     },
     {

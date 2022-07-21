@@ -31,7 +31,8 @@ window.onscroll = () => {
 }
 
 // get page
-const currPage = document.querySelector("#curr-page").innerHTML;
+let currPage = document.querySelector("#curr-page");
+currPage = currPage? currPage.innerHTML : currPage;
 // get all cats
 const pageCats = document.querySelectorAll(".cat");
 // if cats:

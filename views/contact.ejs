@@ -7,6 +7,7 @@
     <% let rootDir = './' %>
     <%- include(rootDir + 'partials/head.ejs') %>
     <link rel="stylesheet" href="/components/contact/contact.css">
+    <link rel="stylesheet" href="/components/common/walker-background-sketch.css">
     <title>Contact | Kenneth Wong</title>
 </head>
 
@@ -20,8 +21,8 @@
     <div id="curr-page"><%= page %></div>
     <%- include(rootDir + 'partials/navbar.ejs') %>
 
-    <!-- banner sketch here: -->
-    <div id="contact-background-sketch" class="sketch fade-in"></div>
+    <!-- background -->
+    <div id="walker-background-sketch" class="sketch fade-in"></div>
 
     <!-- contact -->
     <div class="section contact">
@@ -51,6 +52,6 @@
     <%- include(rootDir + 'partials/footer.ejs') %>
 
     <!-- script -->
-    <script src= "./components/contact/contact-background-sketch.js"></script>
+    <script src= "./components/common/walker-background-sketch.js"></script>
 </body>
 </html>

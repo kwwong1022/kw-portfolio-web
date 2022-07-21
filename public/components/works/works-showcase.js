@@ -140,8 +140,26 @@ let updateMasks = () => {
     let masks = document.querySelectorAll('.mask');
     masks.forEach(m => {
         m.addEventListener('touchstart', () => {
-            masks.forEach(m => m.style.opacity = 0);
+            // masks.forEach(m => m.style.opacity = 0);
             m.style.opacity = 1;
+        })
+        m.addEventListener('touchend', () => {
+            let counting = m.classList.contains('counting');
+
+            if (!counting) {
+                m.classList.add('counting');
+                const remove = setInterval(() => {
+                    m.style.opacity = 0;
+                    m.classList.remove('counting');
+                    clearInterval(remove);
+                }, 1000);
+            } else {
+                const remove = setInterval(() => {
+                    m.style.opacity = 0;
+                    m.classList.remove('counting');
+                    clearInterval(remove);
+                }, 1000);
+            }
         })
     })
 }

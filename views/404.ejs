@@ -6,18 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <% let rootDir = './' %>
     <%- include(rootDir + 'partials/head.ejs') %>
-    <link rel="stylesheet" href="/components/home/home.css">
+    <link rel="stylesheet" href="/components/common/walker-background-sketch.css">
     <title>Kenneth Wong</title>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK4X3ZR"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <!-- navbar -->
     <%- include(rootDir + 'partials/navbar.ejs') %>
+
+    <!-- background -->
+    <div id="walker-background-sketch" class="sketch fade-in"></div>
+
+    <div class="section">
+        <div class="section-content">
+            <div style="margin-top: 35vh; text-align: center; font-size: 2rem;">
+                <div>Error 404</div>
+                <div>Page not found</div>
+            </div>
+        </div>
+    </div>
 
     <!-- footer -->
     <%- include(rootDir + 'partials/footer.ejs') %>
 
     <!-- script -->
-    <!-- <script src= "./components/common/style.js"></script> -->
+    <script src= "./components/common/walker-background-sketch.js"></script>
 </body>
 </html>
