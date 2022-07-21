@@ -1,0 +1,71 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: #1b1b1b;
+}
+
+html {
+    height: 100%;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: rgba(252, 252, 252, 1);
+
+    overflow-x: hidden;
+}
+
+.section {
+    width: 100%; 
+    display: flex; justify-content: center;
+    position: relative; top: 0px;
+}
+.section-content {
+    width: 100%; max-width: 1050px;
+}
+.line-br {
+    width: 100%; 
+    max-width: 1050px;
+    border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
+}
+
+/* responsive grid */
+.container {
+    max-width: 100rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+/* fade in animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+.fade-in.appear {
+    opacity: 1;
+}
+/* - combo with .slide-in */
+.from-left {
+    transform: translateX(-50%);
+}
+.from-right {
+    transform: translateX(50%);
+}
+.from-left, .from-right {
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+}
+.from-left.appear, .from-right.appear {
+    transform: translateX(0);
+    opacity: 1;
+}

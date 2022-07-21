@@ -1,0 +1,5 @@
+footer {
+    margin-top: auto;
+    background-color: rgba(252, 252, 252, 0.8); 
+    backdrop-filter: blur(5px);
+}
