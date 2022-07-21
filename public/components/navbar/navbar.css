@@ -9,10 +9,6 @@ header {
 }
 
 header .content-constraint {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%; max-width: 1050px; margin: 0 7%;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
@@ -62,6 +58,7 @@ header .navbar ul li ul {
     left: 0; 
     width: 180px;
     background-color: #ffffff;
+    border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem;
     display: none;
 }
 header .navbar ul li ul li {
@@ -98,7 +95,7 @@ header .sub-sub-cat.last {
 }
 
 /* toggle */
-.navbar-toggler {
+header .navbar-toggler {
     width: 1rem;
     display: flex;
     justify-content: center;
@@ -106,22 +103,22 @@ header .sub-sub-cat.last {
     display: none;
 }
 
-.btn-show-menu, .btn-close-menu {
+header .btn-show-menu, .btn-close-menu {
     cursor: pointer;
 }
-.btn-show-menu.disabled, .btn-close-menu.disabled {
+header .btn-show-menu.disabled, .btn-close-menu.disabled {
     display: none;
 }
 
 /* login button */
-.content-constraint.nav .btn-login {
+header .content-constraint.nav .btn-login {
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
     height: 30px;
     padding: .2rem .8rem .2rem;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, .9);
 }
-.content-constraint.nav .btn-login span {
+header .content-constraint.nav .btn-login span {
     font-size: 14px; font-weight: 410;
     color: rgba(252, 252, 252, 1);
 }
@@ -129,7 +126,9 @@ header .sub-sub-cat.last {
 /* small */
 @media(max-width:768px) {
     header {
-        padding: 10px;
+        /* old: padding: 10px; */
+        padding: .7rem 1rem;
+        /* background-color: #ececec; color for mobile*/
         border-bottom: 1px solid rgba(0, 0, 0, .1);
     }
 
@@ -158,6 +157,7 @@ header .sub-sub-cat.last {
     header .navbar ul li ul {
         position: relative;
         width: 100%;
+        border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem;
     }
 
     header .navbar ul li ul li {
@@ -209,7 +209,7 @@ header .sub-sub-cat.last {
         
     }
 
-    .container-login-btn {
+    header .container-login-btn {
         display: none;
     }
 }

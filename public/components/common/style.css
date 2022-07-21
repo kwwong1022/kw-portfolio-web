@@ -25,6 +25,13 @@ body {
     overflow-x: hidden;
 }
 
+.content-constraint {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; max-width: 1050px; margin: 0 7%;
+}
+
 .section {
     width: 100%; 
     display: flex; justify-content: center;
@@ -33,18 +40,25 @@ body {
 .section-content {
     width: 100%; max-width: 1050px;
 }
+
 .line-br {
     width: 100%; 
     max-width: 1050px;
     border-bottom: rgba(0, 0, 0, 0.15) solid 1px;
 }
 
+.logo {
+    font-size: 19px;
+    font-weight: 400;
+    font-family: 'Jost', sans-serif;
+}
+
 /* responsive grid */
-.container {
+/* .container {
     max-width: 100rem;
     margin-inline: auto;
     padding-inline: 2rem;
-}
+} */
 
 /* fade in animation */
 .fade-in {
@@ -68,4 +82,11 @@ body {
 .from-left.appear, .from-right.appear {
     transform: translateX(0);
     opacity: 1;
+}
+
+/* small */
+@media(max-width:768px) {
+    .content-constraint {
+        margin: 0;
+    }
 }

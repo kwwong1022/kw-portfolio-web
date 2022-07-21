@@ -2,4 +2,126 @@ footer {
     margin-top: auto;
     background-color: rgba(252, 252, 252, 0.8); 
     backdrop-filter: blur(5px);
+    display: flex; 
+    justify-content: center; 
+    z-index: 5;
+    font-size: 15px;
+}
+
+footer .content-constraint {
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    padding: 1.5rem 0 4rem;
+}
+
+footer .container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "info portal";
+}
+
+footer .info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+}
+footer .portal {
+    grid-area: portal;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 3rem;
+}
+footer .copyright {
+    grid-area: copyright;
+    display: none;
+    width: 100%;
+    margin: 2rem 0 0;
+    font-weight: 300; font-size: 14px;
+    text-align: center;
+}
+
+/* footer .info */
+footer .shortcut {
+    margin-left: .03rem;
+}
+footer .shortcut div {
+    margin-top: 1rem;
+}
+
+/* footer .portal */
+footer .portal .about, footer .portal .works, footer .portal .contact {
+    width: 33%
+}
+footer ul {
+    list-style: none;
+}
+footer ul li {
+    margin-top: .3rem;
+}
+footer ul li:first-of-type {
+    margin-top: .5rem;
+}
+footer ul li a {
+    font-size: 14px;
+    color: rgba(0, 0, 0, .7);
+} 
+
+/* footer .copyright */
+footer .copyright {
+    grid-area: copyright;
+    display: none;
+    width: 100%;
+    margin: 2rem 0 0;
+    font-weight: 300; font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 576px) {
+    footer .content-constraint .container {
+        grid-template-areas: "info info"
+                             "copyright copyright";
+    }
+
+    footer .info {
+        justify-content: center;
+    }
+    footer .portal {
+        display: none;
+    }
+}
+
+/* small */
+@media(max-width:768px) {
+    footer .content-constraint {
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    footer .container {
+        grid-template-areas: "info portal"
+                             "copyright copyright";
+    }
+
+    footer .info {
+        flex-direction: row;
+    }
+
+    footer .shortcut {
+        margin-left: 1rem;
+    }
+    footer .shortcut div {
+        margin-top: .3rem;
+    }
+
+    footer ul li {
+        display: none;
+    }
+
+    footer .info .content {
+        display: none;
+    }
+    footer .copyright {
+        grid-area: copyright;
+        display: block;
+    }
 }

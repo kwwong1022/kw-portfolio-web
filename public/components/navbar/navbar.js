@@ -29,5 +29,3 @@ function toggleNavbar() {
 window.onscroll = () => {
     this.scrollY > 20? header.classList.add('sticky'):header.classList.remove('sticky');
 }
-
-alert("");

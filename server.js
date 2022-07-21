@@ -26,32 +26,31 @@ app.get('/', (req, res) => {
 app.get('/home', (req, res) => {
     res.render('home.ejs');
 });
-// app.get('/about', (req, res) => {
-//     res.render('about.ejs');
-// });
-// app.get('/works', async (req, res) => {
-//     const work = req.query.work;
-//     res.render('./works/works.ejs', {work});
-// });
-// app.get('/contact', (req, res) => {
-//     res.render('contact.ejs');
-// });
+app.get('/about', (req, res) => {
+    res.render('about.ejs');
+});
+app.get('/works', async (req, res) => {
+    const work = req.query.work;
+    res.render('works.ejs', {work});
+});
+app.get('/contact', (req, res) => {
+    res.render('contact.ejs');
+});
 
 
 
 // files
-// app.get('/get-file/cv', (req, res) => {
-//     res.sendFile('Kai_Fung_Wong_-_Junior_Front-end_Developer.pdf', { root: path.join(__dirname, './public/assets/about/') });
-// });
-
-// app.get('/get-file/udemy-certification', (req, res) => {
-//     res.sendFile('udemy-certification.pdf', { root: path.join(__dirname, './public/assets/about/') });
-// });
+app.get('/get-file/cv', (req, res) => {
+    res.sendFile('Kai_Fung_Wong_-_Junior_Front-end_Developer.pdf', { root: path.join(__dirname, './public/assets/about/') });
+});
+app.get('/get-file/udemy-certification', (req, res) => {
+    res.sendFile('udemy-certification.pdf', { root: path.join(__dirname, './public/assets/about/') });
+});
 
 // error handling
-// app.get('*', (req, res) => {
-//     res.render('404.ejs');
-// });
+app.get('*', (req, res) => {
+    res.render('404.ejs');
+});
 
 app.listen(PORT, () => {
     console.log(`app deployed on port ${PORT}`);
