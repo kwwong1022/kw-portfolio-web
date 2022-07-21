@@ -16,9 +16,9 @@
     <div id="curr-page"><%= page %></div>
     <%- include(rootDir + 'partials/navbar.ejs') %>
 
-    <!-- filter -->
-    <%- include(rootDir + 'components/works-filter.ejs') %>
     <!-- works-showcase -->
+    <div id="curr-work" style="display: none;"><%= work %></div>
+    <%- include(rootDir + 'components/works-filter.ejs') %>
     <%- include(rootDir + 'components/works-showcase.ejs') %>
 
     <!-- footer -->

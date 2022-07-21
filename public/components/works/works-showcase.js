@@ -1,9 +1,11 @@
 const grid = document.querySelector('#works-showcase-grid');
 
 let btnCat = document.querySelectorAll('.cat-item');
-let work = document.querySelector("#work")? document.querySelector("#work").innerText:'all';
+let work = document.querySelector("#curr-work")? document.querySelector("#curr-work").innerText:'all';
 let sortedWorks = [];
 let currActived = [];
+
+if (!work) work = 'all';
 
 // update ui based on requested work cat
 btnCat.forEach(btn => {

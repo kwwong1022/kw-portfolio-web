@@ -1,0 +1,83 @@
+#contact-background-sketch {
+    position: absolute; 
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+}
+
+.section.contact {
+    margin: 14rem 0 0;
+}
+
+.section.contact .section-content {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+}
+
+.section.contact .card {
+    max-width: 100%; height: 400px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 0 5rem 0; 
+    padding: 5rem 5rem 4rem; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2); 
+    border-radius: 5px; 
+    /* backdrop-filter: blur(5px); */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.75); 
+}
+
+.section.contact .card .title {
+    font-size: 2rem; 
+    font-weight: 300;
+}
+
+.section.contact .card .info {
+    font-size: .9rem; 
+}
+
+.section.contact .portals {
+    display: flex;
+    justify-content: left;
+}
+
+
+@media (max-width: 576px) {
+    html {
+        position: relative;
+        overflow-x: hidden;
+    } 
+    body {
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .section.contact {
+        margin: 50px 0 0;
+    }
+
+    .section.contact .section-content {
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center;
+        height: 65vh;
+        padding: 5rem 0 3rem;
+    }
+
+    .section.contact .card {
+        height: 100%; 
+        margin: 0 2rem 0; 
+        padding: 4rem 2rem 4rem; 
+        backdrop-filter: blur(14px);
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .section.contact .card {
+        margin: 0 5rem 0; 
+        padding: 5rem 2rem 4rem; 
+    }
+}

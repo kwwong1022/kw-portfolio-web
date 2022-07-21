@@ -1,0 +1,10 @@
+#home-background-sketch {
+    z-index: -9999;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+}
+
+#first-section {
+    margin-top: 970px;
+}
