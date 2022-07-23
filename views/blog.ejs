@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% let rootDir = './' %>
+    <%- include(rootDir + 'partials/head.ejs') %>
+    <link rel="stylesheet" href="/components/blog/blog.css">
+    <title>Blog | Kenneth Wong</title>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK4X3ZR"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- navbar -->
+    <%- include(rootDir + 'partials/navbar.ejs') %>
+
+    <!-- banner sketch here: -->
+    <div id="blog-banner-sketch" class="sketch fade-in" style="width: 100%; height: 230px"></div>
+    
+    <div class="section blog-content">
+        <div class="section-content constraint">
+            <!-- main content -->
+            <div class="main-content">
+                <div style="font-size: 1.6rem; font-weight: 300">Blog Post</div>
+                <!-- blog-filter component -->
+                <div class="filter"></div>
+
+                <!-- blog-post list component -->
+                <div class="blog-post-list">
+                    <div class="blog-post-card">
+
+                    </div>
+                </div>
+                <div class="page-selector"></div>
+                
+            </div>
+
+            <!-- sub content -->
+            <div class="sub-content">
+                <!-- popular post -->
+                <div class="popular-post"></div>
+
+                <!-- recent post -->
+                <div class="recent-post"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <%- include(rootDir + 'partials/footer.ejs') %>
+
+    <!-- script -->
+    <script src= "./components/blog/blog-banner-sketch.js"></script>
+</body>
+</html>

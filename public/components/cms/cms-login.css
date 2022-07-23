@@ -1,0 +1,67 @@
+.section.login-form .section-content {
+    max-width: 330px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 1rem;
+}
+
+.section.login-form form {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5715;
+}
+
+.section.login-form .title {
+    text-align: center;
+    font-size: 33px;
+    font-weight: 500;
+    margin: 4rem 0 2.2rem;
+}
+
+.section.login-form .username, .section.login-form .password {
+    border: solid 1px rgba(0, 0, 0, .3);
+    border-radius: 2px;
+    height: 2.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 200ms ease;
+}
+
+.section.login-form .username:hover, .section.login-form .password:hover {
+    border: solid 1px rgba(0, 0, 0, .8);
+    transition: all 200ms ease;
+}
+
+.section.login-form input {
+    border: none;
+    height: 100%;
+    margin: 0 .8rem;
+    font-size: 16px;
+}
+.section.login-form input:focus {
+    outline: none;
+}
+.section.login-form input::placeholder {
+    color: rgba(0, 0, 0, .4);
+}
+
+.section.login-form .password {
+    margin-top: 1.7rem;
+}
+
+.section.login-form button {
+    margin-top: 1.7rem;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    padding: .65rem 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.section.login-form button span {
+    font-size: 16px;
+    color: white;
+}

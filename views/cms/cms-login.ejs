@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% let rootDir = '../' %>
+    <%- include(rootDir + 'partials/head.ejs') %>
+    <link rel="stylesheet" href="/components/cms/cms.css">
+    <link rel="stylesheet" href="/components/cms/cms-login.css">
+    <link rel="stylesheet" href="/components/common/walker-background-sketch.css">
+    <title>CMS Login | Kenneth Wong</title>
+</head>
+
+<body>
+    <!-- background -->
+    <div id="walker-background-sketch"></div>
+
+    <!-- login form -->
+    <div class="section login-form">
+        <div class="section-content">
+            <div style="width: 100%;">
+                <form autocomplete="off">
+                    <div class="title">CMS Admin</div>
+                    <div class="username">
+                        <input type="text" name="username" id="username" placeholder="User name">
+                    </div>
+                    <div class="password">
+                        <input type="password" name="password" id="pasword" placeholder="Password">
+                    </div>
+                    <button><span>Login</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- script -->
+    <script src= "/components/common/walker-background-sketch.js"></script>
+</body>
+</html>

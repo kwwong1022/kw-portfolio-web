@@ -20,7 +20,7 @@ mongoose.connect('mongodb+srv://kwwong1022:f38k9494@cluster0.x7nst.mongodb.net/p
 });
 
 
-// routes
+// public routes
 app.get('/', (req, res) => {
     const page = "home";
     res.render('home.ejs', {page});
@@ -33,6 +33,15 @@ app.get('/about', (req, res) => {
     const page = "about";
     res.render('about.ejs', {page});
 });
+app.get('/blog', (req, res) => {
+    const page = "blog";
+    res.render('blog.ejs', {page});
+});
+app.get('/blog/post', (req, res) => {
+    const page = "blog-post";
+    // postId
+    res.render('blog-post.ejs', {page});
+});
 app.get('/works', async (req, res) => {
     const page = "works";
     const work = req.query.work;
@@ -42,6 +51,20 @@ app.get('/contact', (req, res) => {
     const page = "contact";
     res.render('contact.ejs', {page});
 });
+
+
+// private routes
+app.get('/cms', (req, res) => {
+    const page = "cms";
+    res.render('cms/cms.ejs', {page});
+});
+app.get('/user/login', (req, res) => {
+    const page = "cms-login";
+    res.render('cms/cms-login.ejs', {page});
+});
+
+
+// APIs
 
 
 // files

@@ -1,0 +1,35 @@
+.section.blog-content .section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "main main sub";
+    margin-top: 1rem;
+}
+
+.section.blog-content .section-content .main-content {
+    grid-area: main;
+}
+.section.blog-content .section-content .sub-content {
+    grid-area: sub;
+}
+
+.section.blog-content .section-content .blog-post-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.section.blog-content .section-content .card {
+
+}
+
+@media (max-width: 576px) {
+    .section.blog-content .section-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "main"
+                             "sub";
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+}
+@media (max-width:768px) {
+}
