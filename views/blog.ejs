@@ -7,6 +7,7 @@
     <% let rootDir = './' %>
     <%- include(rootDir + 'partials/head.ejs') %>
     <link rel="stylesheet" href="/components/blog/blog.css">
+    <link rel="stylesheet" href="/components/blog/blog-filter.css">
     <title>Blog | Kenneth Wong</title>
 </head>
 
@@ -26,27 +27,132 @@
         <div class="section-content constraint">
             <!-- main content -->
             <div class="main-content">
-                <div style="font-size: 1.6rem; font-weight: 300">Blog Post</div>
+                <!-- <div style="font-size: 1.6rem; font-weight: 300">Blog Post</div> -->
                 <!-- blog-filter component -->
-                <div class="filter"></div>
+                <%- include(rootDir + 'components/blog-filter.ejs') %>
 
                 <!-- blog-post list component -->
-                <div class="blog-post-list">
-                    <div class="blog-post-card">
-
-                    </div>
+                <div class="blog-post-list fade-in">
+                    <a href="#" class="card">
+                        <div class="content">
+                            <div class="thumbnail-img"></div>
+                            <div class="description">
+                                <div class="title">Dummy Blog Post</div>
+                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
+                                <div class="date">01-02-2022</div>
+                            </div>
+                        </div>
+                        <div class="mask"></div>
+                    </a>
+                    <a href="#" class="card">
+                        <div class="content">
+                            <div class="thumbnail-img"></div>
+                            <div class="description">
+                                <div class="title">Dummy Blog Post</div>
+                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
+                                <div class="date">01-02-2022</div>
+                            </div>
+                        </div>
+                        <div class="mask"></div>
+                    </a>
+                    <a href="#" class="card">
+                        <div class="content">
+                            <div class="thumbnail-img"></div>
+                            <div class="description">
+                                <div class="title">Dummy Blog Post</div>
+                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
+                                <div class="date">01-02-2022</div>
+                            </div>
+                        </div>
+                        <div class="mask"></div>
+                    </a>
+                    <a href="#" class="card">
+                        <div class="content">
+                            <div class="thumbnail-img"></div>
+                            <div class="description">
+                                <div class="title">Dummy Blog Post</div>
+                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
+                                <div class="date">01-02-2022</div>
+                            </div>
+                        </div>
+                        <div class="mask"></div>
+                    </a>
+                    <a href="#" class="card">
+                        <div class="content">
+                            <div class="thumbnail-img"></div>
+                            <div class="description">
+                                <div class="title">Dummy Blog Post</div>
+                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
+                                <div class="date">01-02-2022</div>
+                            </div>
+                        </div>
+                        <div class="mask"></div>
+                    </a>
                 </div>
-                <div class="page-selector"></div>
-                
+                <div class="page-selector">
+                    <div class="btn previous"><span>&lt;</span></div>
+                    <div class="btn page active"><span>1</span></div>
+                    <div class="btn page"><span>2</span></div>
+                    <div class="btn page"><span>3</span></div>
+                    <!-- display if more than 4 pages -->
+                    <div class="btn rest"><span>. . .</span></div>
+                    <div class="btn page last"><span>6</span></div>
+                    <div class="btn next"><span>&gt;</span></div>
+                </div>
+
             </div>
 
             <!-- sub content -->
             <div class="sub-content">
                 <!-- popular post -->
-                <div class="popular-post"></div>
+                <div class="popular-post fade-in">
+                    <div style="font-size: 1.2rem; margin: 0 0 1.1rem; padding: 0 0 1.25rem; border-bottom: 1px solid rgba(0, 0, 0, .05); color: rgba(0, 0, 0, .8)">Popular Posts</div>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                </div>
 
                 <!-- recent post -->
-                <div class="recent-post"></div>
+                <div class="recent-post fade-in">
+                    <div style="font-size: 1.2rem; margin: 4rem 0 1.1rem; padding: 0 0 1.1rem; border-bottom: 1px solid rgba(0, 0, 0, .05); color: rgba(0, 0, 0, .8)">Recent Posts</div>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                </div>
 
             </div>
         </div>

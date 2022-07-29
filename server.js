@@ -64,9 +64,6 @@ app.get('/user/login', (req, res) => {
 });
 
 
-// APIs
-
-
 // files
 app.get('/get-file/cv', (req, res) => {
     res.sendFile('Kai_Fung_Wong_-_Junior_Front-end_Developer.pdf', { root: path.join(__dirname, './public/assets/about/') });

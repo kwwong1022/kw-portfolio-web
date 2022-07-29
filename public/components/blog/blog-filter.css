@@ -1,9 +1,9 @@
-.section.filter {
-    margin: 0;
+.blog-content .filter {
+    margin: 1rem 0 0;
     padding: 0 1rem 0 0;
 }
 
-.section.filter .filter {
+.blog-content .filter {
     font-size: 1rem;
     font-weight: 300;
     color: rgba(0, 0, 0, .8);
@@ -11,10 +11,10 @@
     overflow-x: scroll;
     padding: 0 .3rem;
 }
-.section.filter .filter::-webkit-scrollbar {
+.blog-content .filter::-webkit-scrollbar {
     display: none;
 }
-.section.filter .filter .cat-item {
+.blog-content .filter .cat-item {
     cursor: pointer;
     color: rgba(0, 0, 0, .6);
     margin: .5rem .3rem 1.2rem 0;
@@ -22,27 +22,27 @@
     font-size: .9rem;
     border-radius: 1rem; box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
-    transition: all 100ms ease;
 }
-.section.filter .filter .cat-item:hover {
+.blog-content .filter .cat-item:hover {
     background-color: rgba(0, 0, 0, .02);
     transition: all 50ms ease;
 }
-.section.filter .filter .cat-item.active {
+.blog-content .filter .cat-item.active {
     border:none;
     border:rgb(0, 0, 0, .3) 1px solid;
+    transition: all 100ms ease;
 }
 
 /* grid @works-showcase.css */
 
 @media (max-width: 576px) {
-    .section.filter .filter {
+    .blog-content .filter {
         padding: 0 0 0 1rem;
     }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
-    .section.filter .filter {
+    .blog-content .filter {
         padding: 0 0 0 1rem;
     }
 }
