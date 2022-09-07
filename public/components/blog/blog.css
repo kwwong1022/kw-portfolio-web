@@ -10,7 +10,7 @@
 }
 .section.blog-content .section-content .sub-content {
     grid-area: sub;
-    padding: 1.5rem 0 0 3rem;
+    padding: 1.5rem 0 0 5rem;
 }
 
 .section.blog-content .section-content .blog-post-list {
@@ -133,8 +133,11 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-.section.blog-content .post-item .title, .section.blog-content .popular-post .post-item .date {
+.section.blog-content .post-item .title {
     color: rgba(0, 0, 0, .8);
+}
+.section.blog-content .post-item .date {
+    color: rgba(0, 0, 0, .6);
 }
 .section.blog-content .post-item .title:hover, .section.blog-content .popular-post .post-item .date:hover {
     color: rgba(0, 0, 0, 1);

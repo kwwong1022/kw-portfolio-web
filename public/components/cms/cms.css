@@ -1,0 +1,98 @@
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    padding: 0 1.5rem;
+}
+.topbar .title {
+    color: rgba(255, 255, 255, .95);
+    font-size: 18px;
+    font-weight: 500;
+}
+.topbar .user {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.topbar .icon {
+    background-color: rgba(255, 255, 255, .9);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+}
+.topbar .username {
+    padding-left: .5rem;
+    color: rgba(255, 255, 255, .95);
+    font-size: 14px;
+}
+
+/* main content */
+.content-wrapper {
+    position: absolute;
+    top: 48px; left: 0; bottom: 0;
+    display: flex;
+    width: 100%;
+}
+.content-wrapper nav {
+    height: 100%;
+    background-color: rgba(255, 255, 255, .88);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .05);
+    width: 290px;
+    min-width: 290px;
+    max-width: 290px;
+    font-size: 14px;
+}
+nav ul li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    padding: 0 1.5rem;
+}
+nav ul li:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, .05);
+}
+nav ul li span {
+    margin-left: .5rem;
+}
+.content-wrapper .main-content {
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+    width: calc(100% - 290px);
+    overflow-y: scroll;
+}
+
+
+/* content */
+.main-content .curr-content-title {
+    background-color: rgb(252, 252, 252);
+    font-size: 24px;
+    padding: 2.5rem 0 1rem 2rem;
+}
+
+.main-content .cms-content {
+    margin: 1.5rem .5rem;
+    background-color: rgb(252, 252, 252);
+    border-radius: 2px;
+    height: 500px;
+}
+.main-content .cms-content:first-of-type {
+    margin: .5rem .5rem;
+}
+
+
+@media (max-width: 576px) {
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+}
+
+@media (min-width: 992px) and (max-width: 1200px) { 
+}

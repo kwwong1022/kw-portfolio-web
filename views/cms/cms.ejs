@@ -11,10 +11,42 @@
 </head>
 
 <body>
-    <!-- navbar -->
-    <%- include(rootDir + 'cms/navbar.ejs') %>
+    <!-- topbar -->
+    <div class="topbar">
+        <div class="title">Kwwdev CMS Admin</div>
+        <div class="user">
+            <div class="icon"></div>
+            <div class="username">kennwong</div>
+        </div>
+    </div>
 
-    <!-- content -->
+    <!-- main content -->
+    <div class="content-wrapper">
+        <!-- navbar -->
+        <nav>
+            <ul>
+                <li>
+                    <i class="fa-light fa-user"></i>
+                    <span>User</span>
+                </li>
+                <li>
+                    <i class="fa-light fa-user"></i>
+                    <span>Blog Post</span>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="main-content">
+            <div class="curr-content-title" style="position: sticky; top: 0px;">Blog Post</div>
+
+            <div style="padding: 1rem">
+                <!-- user -->
+                
+                <!-- blog post -->
+                <%- include(rootDir + 'cms/cms-blog-post.ejs') %>
+            </div>
+        </div>
+    </div>
 
     <!-- script -->
 

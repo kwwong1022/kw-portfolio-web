@@ -13,23 +13,94 @@
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TK4X3ZR"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-    <!-- End Google Tag Manager (noscript) -->
-    
     <!-- navbar -->
     <%- include(rootDir + 'partials/navbar.ejs') %>
 
     <!-- banner sketch here: -->
-    <!-- <div id="blog-banner-sketch" class="sketch fade-in" style="width: 100%; height: 230px"></div> -->
+    <div id="blog-banner-sketch" class="sketch fade-in" style="width: 100%; height: 230px"></div>
     
-    
+    <div class="section blog-content">
+        <div class="section-content constraint">
+            <!-- main content -->
+            <div class="main-content fade-in">
+                <div class="post-title">
+                    <span class="title">Dummy Post Title Here</span>
+                    <span class="date">5 August, 2022</span>
+                </div>
+
+                <!-- tags -->
+                <div class="tags">
+                    <div class="tag">dummy tag</div>
+                    <div class="tag">dummy tag</div>
+                    <div class="tag">dummy tag</div>
+                </div>
+
+                <!-- content -->
+                <div class="post-content-list">
+                    <div class="post-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis temporibus porro provident obcaecati eveniet perspiciatis nulla iste voluptatem recusandae est voluptate expedita, ipsam id culpa vitae? Deserunt ad quasi ipsum!</div>
+                </div>
+            </div>
+
+            <!-- sub content -->
+            <div class="sub-content">
+                <!-- popular post -->
+                <div class="popular-post fade-in">
+                    <div style="font-size: 1.2rem; margin: 0 0 1.1rem; padding: 0 0 1.25rem; border-bottom: 1px solid rgba(0, 0, 0, .05); color: rgba(0, 0, 0, .8)">Popular Posts</div>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                </div>
+
+                <!-- recent post -->
+                <div class="recent-post fade-in">
+                    <div style="font-size: 1.2rem; margin: 4rem 0 1.1rem; padding: 0 0 1.1rem; border-bottom: 1px solid rgba(0, 0, 0, .05); color: rgba(0, 0, 0, .8)">Recent Posts</div>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                    <a class="post-item" href="#">
+                        <div class="title">Dummy Blog Post</div>
+                        <div class="date">01-02-2022</div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <!-- footer -->
     <%- include(rootDir + 'partials/footer.ejs') %>
 
     <!-- script -->
-    <!-- <script src= "./components/blog/blog-banner-sketch.js"></script> -->
+    <script src= "/components/blog/blog-banner-sketch.js"></script>
 </body>
 </html>
