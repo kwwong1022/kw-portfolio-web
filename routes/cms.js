@@ -1,4 +1,5 @@
 const express = require('express');
+const User = require('../models/user.js');
 const Blog = require('../models/blog.js');
 
 const router = express.Router();
@@ -11,23 +12,24 @@ router.get('/cms', (req, res) => {
     res.render('cms/cms.ejs', {page});
 });
 
+/** CMS APIs - User **/
 // login
 router.get('/admin/login', (req, res) => {
     const page = "cms-login";
     res.render('cms/cms-login.ejs', {page});
 });
 
+// create new user
+
+/** CMS APIs - Blog **/
 // create blog post
 router.post('/blog', async (req, res) => {
     const blog = new Blog({
         title: "testing",
         description: "testing"
     });
-    try { 
-        await blog.save() 
-    } catch { 
-        console.log(err) 
-    }
+    try { await blog.save();
+    } catch { console.log() }
 });
 
 // read blog post
