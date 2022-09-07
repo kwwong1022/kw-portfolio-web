@@ -1,25 +1,64 @@
 const express = require('express');
+const bcrypt = require('bcrypt');
 const User = require('../models/user.js');
 const Blog = require('../models/blog.js');
-
 const router = express.Router();
-
 
 // cms panel
 router.get('/cms', (req, res) => {
     const page = "cms";
-    // if not logged in -> redirect to /admin/login
-    res.render('cms/cms.ejs', {page});
+    if (req.session.user_id) {
+        res.render('cms/cms.ejs', { page });
+    } else {
+        res.render('cms/cms-login.ejs');
+    }
 });
 
 /** CMS APIs - User **/
 // login
 router.get('/admin/login', (req, res) => {
-    const page = "cms-login";
-    res.render('cms/cms-login.ejs', {page});
+    res.render('cms/cms-login.ejs');
+});
+
+// authentication
+router.post('/admin/login', async (req, res) => {
+    const { username, password } = req.body;
+    const user = await User.findOne({ username });
+
+    if (user) {
+        const passwordIsValid = await bcrypt.compare(password, user.password);
+
+        try {
+            if (passwordIsValid) {
+                req.session.user_id = user._id;
+                res.redirect('/cms');
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
 });
 
 // create new user
+router.post('/user/create', async (req, res) => {
+    const { username, password } = req.body;
+    const hashedPwd = await bcrypt.hash(password, 12);
+
+    try {
+        const user = new User({
+            username,
+            password: hashedPwd
+        })
+        await user.save();
+
+        req.session.user_id = user._id;
+        res.render('cms/cms.ejs');
+
+    } catch (err) {
+        console.log(err);
+        res.render('cms/cms-login.ejs');
+    }
+})
 
 /** CMS APIs - Blog **/
 // create blog post
@@ -48,4 +87,4 @@ router.get('/get-file/udemy-certification', (req, res) => {
 });
 
 
-module.exports  = router;
+module.exports = router;

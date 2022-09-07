@@ -1,14 +1,15 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: true
+        required: [true, 'Username cannot be blank'],
+        unique: true
     },
     password: {
         type: String,
-        required: true
+        required: [true, 'Password cannot be blank']
     }
 })
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('User', UserSchema);
