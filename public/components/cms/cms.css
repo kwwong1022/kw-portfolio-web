@@ -1,3 +1,20 @@
+table {
+    border-spacing: 0;
+}
+th, td {
+    padding: 1rem .5rem 1rem;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+th {
+    font-weight: 450;
+    background-color: rgb(243, 243, 243);
+}
+td {
+    border-bottom: 1px solid rgba(0, 0, 0, .07);
+}
+
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -73,12 +90,13 @@ nav ul li span {
     font-size: 24px;
     padding: 2.5rem 0 1rem 2rem;
 }
-
+.main-content .cms-content-wrapper {
+    padding: 1rem
+}
 .main-content .cms-content {
     margin: 1.5rem .5rem;
     background-color: rgb(252, 252, 252);
     border-radius: 2px;
-    height: 500px;
 }
 .main-content .cms-content:first-of-type {
     margin: .5rem .5rem;
@@ -86,8 +104,38 @@ nav ul li span {
 
 
 @media (max-width: 576px) {
+    .content-wrapper nav {
+        transform: translateX(-100%);
+        transition: all 300ms ease-in;
+    }
+
+    .content-wrapper .main-content {
+        position: absolute;
+        left: 0; top: 0;
+        height: 100%;
+        background-color: rgb(240, 240, 240);
+        width: 100%;
+        overflow-y: scroll;
+    }
+
+    .main-content .cms-content-wrapper {
+        padding: .5rem
+    }
 }
 @media (min-width: 577px) and (max-width: 768px) {
+    .content-wrapper nav {
+        transform: translateX(-100%);
+        transition: all 300ms ease-in;
+    }
+
+    .content-wrapper .main-content {
+        position: absolute;
+        left: 0; top: 0;
+        height: 100%;
+        background-color: rgb(240, 240, 240);
+        width: 100%;
+        overflow-y: scroll;
+    }
 }
 @media (min-width: 768px) and (max-width: 992px) {
 }

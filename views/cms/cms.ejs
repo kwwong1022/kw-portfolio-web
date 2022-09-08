@@ -16,7 +16,7 @@
         <div class="title">Kwwdev CMS Admin</div>
         <div class="user">
             <div class="icon"></div>
-            <div class="username">kennwong</div>
+            <div class="username"><%= username %></div>
         </div>
     </div>
 
@@ -37,13 +37,13 @@
         </nav>
 
         <div class="main-content">
-            <div class="curr-content-title" style="position: sticky; top: 0px;">Blog Post</div>
+            <div class="curr-content-title" style="position: sticky; top: 0px;">User</div>
 
-            <div style="padding: 1rem">
+            <div class="cms-content-wrapper">
                 <!-- user -->
-                
+                <%- include(rootDir + 'cms/cms-user.ejs') %>
                 <!-- blog post -->
-                <%- include(rootDir + 'cms/cms-blog-post.ejs') %>
+
             </div>
         </div>
     </div>

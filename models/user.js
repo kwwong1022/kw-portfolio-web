@@ -3,12 +3,28 @@ const mongoose = require('mongoose');
 const UserSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: [true, 'Username cannot be blank'],
+        required: [true, 'username cannot be blank'],
         unique: true
     },
     password: {
         type: String,
-        required: [true, 'Password cannot be blank']
+        required: [true, 'password cannot be blank']
+    },
+    role: {
+        type: String,
+        required: [true, 'user role cannot be blank']
+    },
+    creationTime: {
+        type: String,
+        required: [true, 'please add creation time']
+    },
+    modificationTime: {
+        type: String,
+        required: [true, 'please add modification time']
+    },
+    email: {
+        type: String,
+        required: false
     }
 })
 

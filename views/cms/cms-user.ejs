@@ -1,3 +1,59 @@
-<div class="cms-content">
-    
+<div class="cms-content filter" style="padding: 2rem 1rem;">
+    <form action="/user/create" method="POST">
+        <input type="text" name="username" id="username" placeholder="User name">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="text" name="role" id="role" placeholder="role">
+        <input type="email" name="email" id="email" placeholder="email">
+        <button>Create user</button>
+    </form>
+    <script>
+        function fetchPOST () {
+            fetch("/user", {
+                method: "post",
+                body: {}
+            })
+            .then((res) => res.json())
+            .then((data) => { 
+                console.log(data);
+                const table = document.querySelector('table');
+                data.forEach((user, i) => {
+                    console.log(user);
+                    const tr = document.createElement('tr');
+                    let td = document.createElement('td');
+                    td.innerText = user.username;
+                    tr.appendChild(td);
+                    td = document.createElement('td');
+                    td.innerText = user.email;
+                    tr.appendChild(td);
+                    td = document.createElement('td');
+                    td.innerText = user.role;
+                    tr.appendChild(td);
+                    td = document.createElement('td');
+                    td.innerText = user.creationTime;
+                    tr.appendChild(td);
+                    td = document.createElement('td');
+                    td.innerText = user.modificationTime;
+                    tr.appendChild(td);
+                    table.appendChild(tr);
+                })
+            })
+            .catch((err) => { console.log(err); });
+        }
+    </script>
+    <button onclick="fetchPOST()">fetch user data</button>
+</div>
+
+<div class="cms-content list" style="padding: 1rem 1.5rem 2rem;">
+    <div style="font-weight: 450; margin: 1rem 0 2rem;">User List</div>
+    <div class="scrollable-x" style="width: 100%; max-width: 100%; display: flex;">
+        <table style="width: 100%;">
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Creation Time</th>
+                <th>Modification Time</th>
+            </tr>
+        </table>
+    </div>
 </div>
