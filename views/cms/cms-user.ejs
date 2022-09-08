@@ -1,13 +1,6 @@
-<div class="cms-content filter" style="padding: 2rem 1rem;">
-    <form action="/user/create" method="POST">
-        <input type="text" name="username" id="username" placeholder="User name">
-        <input type="password" name="password" id="password" placeholder="Password">
-        <input type="text" name="role" id="role" placeholder="role">
-        <input type="email" name="email" id="email" placeholder="email">
-        <button>Create user</button>
-    </form>
+<div class="cms-content filter" style="padding: 2rem 1.5rem;">
     <script>
-        function fetchPOST () {
+        function fetchUser () {
             fetch("/user", {
                 method: "post",
                 body: {}
@@ -40,12 +33,34 @@
             .catch((err) => { console.log(err); });
         }
     </script>
-    <button onclick="fetchPOST()">fetch user data</button>
+
+    <form action="/user/create" method="POST">
+        <div style="display: flex;">
+            <div class="input">
+                <input type="text" name="username" id="username" placeholder="User name">
+            </div>
+            <div class="input">
+                <input type="text" name="password" id="password" placeholder="Password">
+            </div>
+            <div class="input">
+                <input type="text" name="role" id="role" placeholder="role">
+            </div>
+            <div class="input">
+                <input type="email" name="email" id="email" placeholder="email">
+            </div>
+        </div>
+        
+        <div style="display: flex;">
+            <button><span>Create user</span></button>
+            <div class="button" onclick="fetchUser()"><span>Fetch user</span></div>
+        </div>
+    </form>
+    
 </div>
 
 <div class="cms-content list" style="padding: 1rem 1.5rem 2rem;">
     <div style="font-weight: 450; margin: 1rem 0 2rem;">User List</div>
-    <div class="scrollable-x" style="width: 100%; max-width: 100%; display: flex;">
+    <div class="scrollable-x" style="width: 100%; max-width: 100%; display: flex; overflow-x: scroll;">
         <table style="width: 100%;">
             <tr>
                 <th>Username</th>
