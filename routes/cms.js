@@ -4,6 +4,7 @@ const User = require('../models/user.js');
 const Blog = require('../models/blog.js');
 const router = express.Router();
 
+
 // cms panel
 router.get('/cms', async (req, res) => {
     const page = "cms";
@@ -89,9 +90,6 @@ router.post('/user', async (req, res) => {
     try {
         if (user && user.role == 'Admin') {
             const allUsers = await User.find();
-            // const data = {
-            //     user: allUsers
-            // }
             res.json( allUsers );
         } else {
             console.log('no permission to retrieve user data');
@@ -117,15 +115,6 @@ router.post('/blog', async (req, res) => {
 // update blog post
 
 // delete blog post
-
-
-// files
-router.get('/get-file/cv', (req, res) => {
-    res.sendFile('Kai_Fung_Wong_-_Front-end_Developer.pdf', { root: path.join(__dirname, './public/assets/about/') });
-});
-router.get('/get-file/udemy-certification', (req, res) => {
-    res.sendFile('udemy-certification.pdf', { root: path.join(__dirname, './public/assets/about/') });
-});
 
 
 module.exports = router;

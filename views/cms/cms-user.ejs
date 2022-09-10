@@ -7,10 +7,9 @@
             })
             .then((res) => res.json())
             .then((data) => { 
-                console.log(data);
+                // console.log(data);
                 const table = document.querySelector('table');
                 data.forEach((user, i) => {
-                    console.log(user);
                     const tr = document.createElement('tr');
                     let td = document.createElement('td');
                     td.innerText = user.username;
@@ -35,7 +34,7 @@
     </script>
 
     <form action="/user/create" method="POST">
-        <div style="display: flex;">
+        <div class="scrollable-x" style="display: flex;">
             <div class="input">
                 <input type="text" name="username" id="username" placeholder="User name">
             </div>
@@ -60,7 +59,7 @@
 
 <div class="cms-content list" style="padding: 1rem 1.5rem 2rem;">
     <div style="font-weight: 450; margin: 1rem 0 2rem;">User List</div>
-    <div class="scrollable-x" style="width: 100%; max-width: 100%; display: flex; overflow-x: scroll;">
+    <div class="scrollable-x" style="width: 100%; max-width: 100%; display: flex;">
         <table style="width: 100%;">
             <tr>
                 <th>Username</th>

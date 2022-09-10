@@ -21,6 +21,16 @@ app.use(express.json());
 app.use(portfolioRouter);
 app.use(cmsRouter);
 
+
+// files
+app.get('/get-file/cv', (req, res) => {
+    res.sendFile('Kai_Fung_Wong_-_Front-end_Developer.pdf', { root: path.join(__dirname, './public/assets/about/') });
+});
+app.get('/get-file/udemy-certification', (req, res) => {
+    res.sendFile('udemy-certification.pdf', { root: path.join(__dirname, './public/assets/about/') });
+});
+
+
 // error handling
 app.get('*', (req, res) => {
     res.render('404.ejs');

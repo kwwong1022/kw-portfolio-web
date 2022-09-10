@@ -13,7 +13,13 @@
 <body>
     <!-- topbar -->
     <div class="topbar">
-        <div class="title">Kwwdev CMS Admin</div>
+        <div class="title-section" style="display: flex; align-items: center;">
+            <div class="toggler">
+                <i class="fas fa-bars btn-show-menu" style="color: rgb(255, 255, 255);"></i>
+                <i class="fas fa-times btn-close-menu disabled" style="color: rgb(255, 255, 255);"></i>
+            </div>
+            <span class="title">Kwwdev CMS Admin</span>
+        </div>
         <div class="user">
             <div class="icon"></div>
             <div class="username"><%= username %></div>
@@ -25,11 +31,11 @@
         <!-- navbar -->
         <nav>
             <ul>
-                <li>
+                <li class="nav-item user current">
                     <i class="fa-light fa-user"></i>
                     <span>User</span>
                 </li>
-                <li>
+                <li class="nav-item blog-post">
                     <i class="fa-light fa-user"></i>
                     <span>Blog Post</span>
                 </li>
@@ -41,9 +47,14 @@
 
             <div class="cms-content-wrapper">
                 <!-- user -->
-                <%- include(rootDir + 'cms/cms-user.ejs') %>
+                <div class="cms-section user current">
+                    <%- include(rootDir + 'cms/cms-user.ejs') %>
+                </div>
+                
                 <!-- blog post -->
-
+                <div class="cms-section blog">
+                    <%- include(rootDir + 'cms/cms-blog-post.ejs') %>
+                </div>
             </div>
         </div>
     </div>
