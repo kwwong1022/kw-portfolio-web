@@ -1,48 +1,14 @@
 <div class="cms-content filter" style="padding: 2rem 1.5rem;">
-    <script>
-        function fetchUser () {
-            fetch("/user", {
-                method: "post",
-                body: {}
-            })
-            .then((res) => res.json())
-            .then((data) => { 
-                // console.log(data);
-                const table = document.querySelector('table');
-                data.forEach((user, i) => {
-                    const tr = document.createElement('tr');
-                    let td = document.createElement('td');
-                    td.innerText = user.username;
-                    tr.appendChild(td);
-                    td = document.createElement('td');
-                    td.innerText = user.email;
-                    tr.appendChild(td);
-                    td = document.createElement('td');
-                    td.innerText = user.role;
-                    tr.appendChild(td);
-                    td = document.createElement('td');
-                    td.innerText = user.creationTime;
-                    tr.appendChild(td);
-                    td = document.createElement('td');
-                    td.innerText = user.modificationTime;
-                    tr.appendChild(td);
-                    table.appendChild(tr);
-                })
-            })
-            .catch((err) => { console.log(err); });
-        }
-    </script>
-
     <form action="/user/create" method="POST">
         <div class="scrollable-x" style="display: flex;">
             <div class="input">
-                <input type="text" name="username" id="username" placeholder="User name">
+                <input type="text" name="username" id="username" placeholder="User name" required>
             </div>
             <div class="input">
-                <input type="text" name="password" id="password" placeholder="Password">
+                <input type="text" name="password" id="password" placeholder="Password" required>
             </div>
             <div class="input">
-                <input type="text" name="role" id="role" placeholder="role">
+                <input type="text" name="role" id="role" placeholder="role" required>
             </div>
             <div class="input">
                 <input type="email" name="email" id="email" placeholder="email">
@@ -54,7 +20,6 @@
             <div class="button" onclick="fetchUser()"><span>Fetch user</span></div>
         </div>
     </form>
-    
 </div>
 
 <div class="cms-content list" style="padding: 1rem 1.5rem 2rem;">

@@ -10,7 +10,7 @@ router.get('/cms', async (req, res) => {
     const page = "cms";
     const currListing = req.query.currListing? req.query.currListing : 'user';
     const userId = req.session.user_id;
-    
+
     if (userId) {
         const user = await User.findOne({ _id: userId });
         const username = user.username;
@@ -77,8 +77,7 @@ router.post('/user/create', async (req, res) => {
         await user.save();
         console.log('saved user data to mongoDB');
 
-        req.session.user_id = user._id;
-        res.render('cms/cms.ejs');
+        res.redirect('/cms');
 
     } catch (err) {
         console.log('create user failed' + err);

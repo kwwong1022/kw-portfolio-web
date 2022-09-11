@@ -3,7 +3,7 @@ const toggler = document.querySelector('.toggler');
 const nav = document.querySelector('.nav');
 let isNavHide = true;
 
-toggler.addEventListener('click', () => {
+const toggleNavbar = () => {
     if (!isNavHide) {
         nav.classList.remove('show');
         document.querySelector('.btn-show-menu').classList.remove('disabled');
@@ -14,7 +14,12 @@ toggler.addEventListener('click', () => {
         document.querySelector('.btn-close-menu').classList.remove('disabled');
     }
     isNavHide = !isNavHide;
+}
+
+toggler.addEventListener('click', () => {
+    toggleNavbar();
 })
+
 
 // switch cms content
 const listingOptions = ["user", "blog-post", "testing"];
@@ -22,7 +27,6 @@ const navItems = document.querySelectorAll('.nav-item');
 const navItemUser = document.querySelectorAll('.nav-item.user');
 const navItemBlogPost = document.querySelectorAll('.nav-item.blog-post');
 const mainContentTitle = document.querySelector('.curr-content-title');
-
 const mainContentSections = document.querySelectorAll('.cms-section');
 const mainContentUser = document.querySelectorAll('.cms-section.user');
 const mainContentBlogPost = document.querySelectorAll('.cms-section.blog-post');
@@ -58,6 +62,19 @@ let currListing = getCurrListing(document.querySelector('#curr-listing'), listin
 updateNavFocus(currListing);
 updateListingVisibility(currListing);
 
+
+// init main content
+switch (currListing) {
+    case 'user':
+        initUser();
+        break;
+    case 'blog-post':
+        initBlogPost();
+        break;
+}
+
+
+// update main content
 navItems.forEach(item => {
     item.addEventListener('click', () => {
         // alert();
@@ -66,5 +83,6 @@ navItems.forEach(item => {
         })
         updateNavFocus(currListing);
         updateListingVisibility(currListing);
+        toggleNavbar();
     });
 });

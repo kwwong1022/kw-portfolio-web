@@ -1,11 +1,35 @@
-<div class="cms-content filter" style="height: 150px;">
-    <!-- <form action="/user/create" method="POST">
-        <input type="text" name="username" id="username" placeholder="User name">
-        <input type="password" name="password" id="password" placeholder="Password">
-        <button>Create user</button>
-    </form> -->
+<div class="cms-content filter" style="padding: 2rem 1.5rem;">
+    <form>
+        <div class="scrollable-x" style="display: flex;">
+            <div class="input">
+                <input type="text" name="status" id="status" placeholder="Status">
+            </div>
+            <div class="input">
+                <input type="text" name="type" id="type" placeholder="Type">
+            </div>
+            <div class="input">
+                <input type="text" name="blog-post-title" id="blog-post-title" placeholder="Blog Post Title">
+            </div>
+        </div>
+        
+        <div style="display: flex;">
+            <div class="button" style="padding: 0.5rem 1.5rem 0.55rem" onclick="alert()"><span>Reset</span></div>
+            <div class="button" style="padding: 0.5rem 1.5rem 0.55rem" onclick="alert()"><span>Query</span></div>
+        </div>
+    </form>
 </div>
 
-<div class="cms-content list">
-
+<div class="cms-content list" style="padding: 1rem 1.5rem 2rem;">
+    <div style="font-weight: 450; margin: 1rem 0 2rem;">Blog-post List</div>
+    <div class="scrollable-x" style="width: 100%; max-width: 100%; display: flex;">
+        <table style="width: 100%;">
+            <tr>
+                <th>Status</th>
+                <th>Type</th>
+                <th>Title</th>
+                <th>Creation Time</th>
+                <th>Modification Time</th>
+            </tr>
+        </table>
+    </div>
 </div>
