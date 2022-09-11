@@ -12,6 +12,7 @@
 
 <body>
     <!-- topbar -->
+    <div id="curr-listing" style="display: none;"><%= currListing %></div>
     <div class="topbar">
         <div class="title-section" style="display: flex; align-items: center;">
             <div class="toggler">
@@ -29,7 +30,7 @@
     <!-- main content -->
     <div class="content-wrapper">
         <!-- navbar -->
-        <nav>
+        <nav class="nav">
             <ul>
                 <li class="nav-item user current">
                     <i class="fa-light fa-user"></i>
@@ -43,7 +44,7 @@
         </nav>
 
         <div class="main-content">
-            <div class="curr-content-title" style="position: sticky; top: 0px;">User</div>
+            <div class="curr-content-title" style="position: sticky; top: 0px;"></div>
 
             <div class="cms-content-wrapper">
                 <!-- user -->
@@ -52,7 +53,7 @@
                 </div>
                 
                 <!-- blog post -->
-                <div class="cms-section blog">
+                <div class="cms-section blog-post">
                     <%- include(rootDir + 'cms/cms-blog-post.ejs') %>
                 </div>
             </div>
@@ -60,6 +61,8 @@
     </div>
 
     <!-- script -->
-
+    <script src= "./components/cms/cms.js"></script>
+    <script src= "./components/cms/cms-user.js"></script>
+    <script src= "./components/cms/cms-blog-post.js"></script>
 </body>
 </html>

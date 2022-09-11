@@ -8,12 +8,14 @@ const router = express.Router();
 // cms panel
 router.get('/cms', async (req, res) => {
     const page = "cms";
+    const currListing = req.query.currListing? req.query.currListing : 'user';
     const userId = req.session.user_id;
+    
     if (userId) {
         const user = await User.findOne({ _id: userId });
         const username = user.username;
         console.log('redirecting to cms');
-        res.render('cms/cms.ejs', { page, username });
+        res.render('cms/cms.ejs', { page, username, currListing });
     } else {
         console.log('redirecting to cms login page');
         res.render('cms/cms-login.ejs');
