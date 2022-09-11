@@ -1,4 +1,4 @@
-function fetchUser () {
+const fetchUser = () => {
     fetch("/user", {
         method: "post",
         body: {}
@@ -7,9 +7,7 @@ function fetchUser () {
     .then((data) => { 
         const table = document.querySelector('.cms-section.user table');
         const tds = document.querySelectorAll('.cms-section.user td');
-        tds.forEach(el => {
-            el.parentNode.removeChild(el);
-        })
+        tds.forEach(el => el.parentNode.removeChild(el));
         data.forEach((user, i) => {
             const tr = document.createElement('tr');
             let td = document.createElement('td');
@@ -28,7 +26,7 @@ function fetchUser () {
             td.innerText = user.modificationTime;
             tr.appendChild(td);
             table.appendChild(tr);
-        })
+        });
     })
     .catch((err) => { console.log(err); });
 }

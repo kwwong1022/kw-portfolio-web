@@ -14,20 +14,19 @@
     border: solid 1px rgba(0, 0, 0, .8);
     transition: all 200ms ease;
 }
-input {
+input, select {
     border: none;
     height: 100%;
     margin: 0 .8rem;
     font-size: 14px;
 }
-input:focus {
+input:focus, select:focus {
     outline: none;
 }
-input::placeholder {
+input::placeholder, select::placeholder {
     color: rgba(0, 0, 0, .4);
 }
 button, .button {
-    margin: 1.7rem 1rem 0 0;
     background-color: rgba(0, 0, 0, .8);
     padding: .5rem 1rem .55rem;
     border: none;
@@ -105,6 +104,31 @@ td {
     color: rgba(255, 255, 255, .95);
     font-size: 14px;
 }
+.user-menu {
+    display: none;
+    opacity: 0%;
+    position: absolute; 
+    top: 48px; right: 0; 
+    z-index: 3; 
+    background-color: rgb(253, 253, 253); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, .05); 
+    border: 1px solid rgba(0, 0, 0, .1);
+    transition: all 300ms ease-in;
+}
+.user-menu.show {
+    display: block;
+    opacity: 100%;
+    transition: all 100ms ease-in;
+}
+.user-menu ul {
+    list-style-type: none;
+    font-size: .95rem;
+    padding: .7rem 1.5rem .7rem 4rem; 
+    cursor: pointer;
+}
+.user-menu ul:hover {
+    background-color: rgba(0, 0, 0, .15);
+}
 
 /* navbar */
 .content-wrapper .nav {
@@ -170,10 +194,10 @@ td {
 
 
 /* cms-section */
-.cms-section {
+.cms-section, .cms-form {
     display: none;
 }
-.cms-section.current {
+.cms-section.current, .cms-form.current {
     display: block;
 }
 

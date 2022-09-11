@@ -1,13 +1,34 @@
 const mongoose = require('mongoose');
 
 const BlogSchema = new mongoose.Schema({
+    status: {
+        type: String,
+        required: [true, 'status cannot be blank'],
+        unique: true
+    },
+    type: {
+        type: String,
+        required: [true, 'type cannot be blank']
+    },
     title: {
         type: String,
-        required: true
+        required: [true, 'title cannot be blank']
     },
     description: {
         type: String,
-        required: true
+        required: false
+    },
+    tags: {
+        type: String,
+        required: false
+    },
+    creationTime: {
+        type: String,
+        required: [true, 'please add creation time']
+    },
+    modificationTime: {
+        type: String,
+        required: [true, 'please add modification time']
     }
 })
 

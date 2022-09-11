@@ -26,6 +26,11 @@
             <div class="username"><%= username %></div>
         </div>
     </div>
+    <div class="user-menu">
+        <ul onclick="alert()">
+            <li>Logout</li>
+        </ul>
+    </div>
 
     <!-- main content -->
     <div class="content-wrapper">
@@ -55,6 +60,10 @@
                 <!-- blog post -->
                 <div class="cms-section blog-post">
                     <%- include(rootDir + 'cms/cms-blog-post.ejs') %>
+                </div>
+                <!-- blog post form -->
+                <div class="cms-form blog-post">
+                    <%- include(rootDir + 'cms/cms-blog-post-form.ejs') %>
                 </div>
             </div>
         </div>

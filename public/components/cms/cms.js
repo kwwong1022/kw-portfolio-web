@@ -21,8 +21,27 @@ toggler.addEventListener('click', () => {
 })
 
 
+// user-nav
+const userInfo = document.querySelector('.topbar .user');
+const userMenu = document.querySelector('.user-menu');
+userInfo.addEventListener('mouseenter', () => {
+    userMenu.classList.add('show');
+})
+userMenu.addEventListener('mouseleave', () => {
+    userMenu.classList.remove('show');
+})
+
+userInfo.addEventListener('click', () => {
+    if (userMenu.classList.contains('show')) {
+        userMenu.classList.remove('show');
+    } else {
+        userMenu.classList.add('show');
+    }
+})
+
+
 // switch cms content
-const listingOptions = ["user", "blog-post", "testing"];
+const listingOptions = ["user", "blog-post", "blog-post-form"];
 const navItems = document.querySelectorAll('.nav-item');
 const navItemUser = document.querySelectorAll('.nav-item.user');
 const navItemBlogPost = document.querySelectorAll('.nav-item.blog-post');
@@ -30,6 +49,7 @@ const mainContentTitle = document.querySelector('.curr-content-title');
 const mainContentSections = document.querySelectorAll('.cms-section');
 const mainContentUser = document.querySelectorAll('.cms-section.user');
 const mainContentBlogPost = document.querySelectorAll('.cms-section.blog-post');
+const forms = document.querySelectorAll('.cms-form');
 
 const getCurrListing = (el, validListingArr) => {
     let curr = el.innerText;
@@ -58,31 +78,51 @@ const updateListingVisibility = (currListing) => {
     })
 }
 
+
+// init UI
 let currListing = getCurrListing(document.querySelector('#curr-listing'), listingOptions);
 updateNavFocus(currListing);
 updateListingVisibility(currListing);
 
-
 // init main content
-switch (currListing) {
-    case 'user':
-        initUser();
-        break;
-    case 'blog-post':
-        initBlogPost();
-        break;
+const initMainContent = (currListing) => {
+    switch (currListing) {
+        case 'user':
+            initUser();
+            break;
+        case 'blog-post':
+            initBlogPost();
+            break;
+    }
 }
-
+initMainContent(currListing);
 
 // update main content
 navItems.forEach(item => {
     item.addEventListener('click', () => {
-        // alert();
+        // update current listing var
         listingOptions.forEach(option => {
             currListing = item.classList.contains(option)? option : currListing;
         })
+        // update UI
         updateNavFocus(currListing);
         updateListingVisibility(currListing);
         toggleNavbar();
+        // init listing based on current listing
+        initMainContent(currListing);
+        forms.forEach(form => form.classList.remove('current'));
     });
 });
+
+// update create new content form
+const blogPostForm = document.querySelector('.cms-form.blog-post');
+const showNewContentForm = () => {
+    // hide all main content
+    mainContentSections.forEach(section => section.classList.remove('current'));
+    // show form based on current listing
+    switch (currListing) {
+        case 'blog-post':
+            blogPostForm.classList.add('current');
+            break;
+    }
+}

@@ -1,0 +1,65 @@
+<div class="form-wrapper" style="padding: 2rem 1.5rem;">
+    <form style="font-size: .95rem;">
+        <div class="scrollable-x" style="display: flex; flex-direction: column; width: 100%; margin-bottom: 1.5rem;">
+            <div>Status</div>
+            <div class="input" style="width: 100%; margin-top: .5rem;">
+                <select name="status" id="status" placeholder="Please select" required>
+                    <option value="draft">Draft</option>
+                    <option value="published">Published</option>
+                    <option value="unpublished">Un-published</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="scrollable-x" style="display: flex; flex-direction: column; width: 100%; margin-bottom: 1.5rem;">
+            <div>Type</div>
+            <div class="input" style="width: 100%; margin-top: .5rem;">
+                <select name="type" id="type" placeholder="Please select" required>
+                    <option value="study">Study</option>
+                    <option value="tutorial">Tutorial</option>
+                    <option value="work">Work</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="scrollable-x" style="display: flex; flex-direction: column; width: 100%; margin-bottom: 1.5rem;">
+            <div>Title</div>
+            <div class="input" style="width: 100%; margin-top: .5rem;">
+                <input type="text" name="title" id="title" placeholder="Please enter" required>
+            </div>
+        </div>
+
+        <div class="scrollable-x" style="display: flex; flex-direction: column; width: 100%; margin-bottom: 1.5rem;">
+            <div>Description</div>
+            <div class="input" style="width: 100%; margin-top: .5rem;">
+                <input type="text" name="description" id="description" placeholder="Please enter">
+            </div>
+        </div>
+
+        <div class="scrollable-x" style="display: flex; flex-direction: column; width: 100%; margin-bottom: .5rem;">
+            <div>Tags</div>
+            <div style="display: flex; align-items: center; width: 100%;">
+                <div class="input" style="margin-bottom: .4rem; width: auto; display: flex; flex-direction: row; justify-content: left; align-items: center; width: fit-content; margin-top: .5rem;">
+                    <input type="text" name="type" id="type" placeholder="Please enter">
+                </div>
+                <div class="button" style="padding: 0.5rem 1.5rem 0.55rem; margin-right: 1rem;" onclick="alert()"><span>Add</span></div>
+            </div>
+            
+        </div>
+        <div class="scrollable-x" style="width: 100%; max-width: 100%; display: flex; margin-bottom: 1.5rem;">
+            <!-- tags here -->
+            <div class="tag" style="display: flex; border-radius: 15px; background-color: rgb(253, 253, 253); padding: .2rem .8rem; font-size: .9rem; margin-right: .5rem;">
+                <span style="margin-right: .5rem; color: rgba(0, 0, 0, .7); white-space: nowrap; cursor: default;">dummy tag</span>
+                <div class="btn-close" style="color: rgba(0, 0, 0, .7); cursor: pointer;">x</div>
+            </div>
+        </div>
+
+        <div class="content-container"></div>
+
+        <div class="btn-new-content-block"></div>
+        
+        <div style="display: flex; margin-top: 1.7rem;">
+            <div class="button" style="padding: 0.5rem 1.5rem 0.55rem; margin-right: 1rem;" onclick="alert()"><span>Submit</span></div>
+        </div>
+    </form>
+</div>

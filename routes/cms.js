@@ -112,6 +112,16 @@ router.post('/blog', async (req, res) => {
 });
 
 // read blog post
+router.post('/blog-post', async (req, res) => {
+    const userId = req.session.user_id;
+    const user = await User.findOne({ _id: userId });
+    try {
+        const allPosts = await Blog.find();
+        res.json( allPosts );
+    } catch (err) {
+        console.log('server error: ' + err);
+    }
+});
 
 // update blog post
 
