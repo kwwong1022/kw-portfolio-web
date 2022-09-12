@@ -105,13 +105,16 @@ router.post('/user', async (req, res) => {
 router.post('/blog-post/create', async (req, res) => {
     const { status, type, title, description, tags } = req.body;
     console.log(`${status}, ${type}, ${title}, ${description}, ${tags}`);
+    console.log(typeof(tags));
+    console.log(tags);
 
     const blog = new Blog({
         status: status,
         type: type,
         title: title,
         description: description,
-        tags: tags,
+        tags: JSON.parse(tags),
+        views: 0,
         creationTime: Date.now(),
         modificationTime: Date.now()
     });
@@ -128,7 +131,7 @@ router.post('/blog-post/create', async (req, res) => {
     }
 });
 
-// read blog post
+// retrieve blog post
 router.post('/blog-post', async (req, res) => {
     // const userId = req.session.user_id;
     // const user = await User.findOne({ _id: userId });

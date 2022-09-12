@@ -15,11 +15,11 @@ const UserSchema = new mongoose.Schema({
         required: [true, 'user role cannot be blank']
     },
     creationTime: {
-        type: String,
+        type: Date,
         required: [true, 'please add creation time']
     },
     modificationTime: {
-        type: String,
+        type: Date,
         required: [true, 'please add modification time']
     },
     email: {

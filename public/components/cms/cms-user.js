@@ -22,10 +22,10 @@ const fetchUser = () => {
             td.innerText = user.role;
             tr.appendChild(td);
             td = document.createElement('td');
-            td.innerText = user.creationTime;
+            td.innerText = user.creationTime.slice(0, 19);
             tr.appendChild(td);
             td = document.createElement('td');
-            td.innerText = user.modificationTime;
+            td.innerText = user.modificationTime.slice(0, 19);
             tr.appendChild(td);
             table.appendChild(tr);
         });

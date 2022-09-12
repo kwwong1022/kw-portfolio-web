@@ -18,15 +18,19 @@ const BlogSchema = new mongoose.Schema({
         required: false
     },
     tags: {
-        type: String,
+        type: [String],
+        required: false
+    },
+    views: {
+        type: Number,
         required: false
     },
     creationTime: {
-        type: String,
+        type: Date,
         required: [true, 'please add creation time']
     },
     modificationTime: {
-        type: String,
+        type: Date,
         required: [true, 'please add modification time']
     }
 })

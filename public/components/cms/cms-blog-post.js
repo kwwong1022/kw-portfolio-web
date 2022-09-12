@@ -12,24 +12,19 @@ const fetchBlogPost = () => {
             const tr = document.createElement('tr');
             tr.setAttribute('onclick', `window.location='/';`);
             let td = document.createElement('td');
-            td.setAttribute('id', post._id);
             td.innerText = post.status;
             tr.appendChild(td);
             td = document.createElement('td');
-            td.setAttribute('id', post._id);
             td.innerText = post.type;
             tr.appendChild(td);
             td = document.createElement('td');
-            td.setAttribute('id', post._id);
             td.innerText = post.title;
             tr.appendChild(td);
             td = document.createElement('td');
-            td.setAttribute('id', post._id);
-            td.innerText = post.creationTime;
+            td.innerText = post.creationTime.slice(0, 19);
             tr.appendChild(td);
             td = document.createElement('td');
-            td.setAttribute('id', post._id);
-            td.innerText = post.modificationTime;
+            td.innerText = post.modificationTime.slice(0, 19);
             tr.appendChild(td);
             table.appendChild(tr);
         });
@@ -43,7 +38,7 @@ const createBlogPost = () => {
     const postType = document.querySelector('.cms-form.blog-post #type').value;
     const postTitle = document.querySelector('.cms-form.blog-post #title').value;
     const postDescription = document.querySelector('.cms-form.blog-post #description').value;
-    const postTags = ['dummy tag 1', 'dummy tag 2', 'dummy tag 3'];
+    const postTags = JSON.stringify(['dummy tag 1', 'dummy tag 2', 'dummy tag 3']);
 
     data.append("status", postStatus);
     data.append("type", postType);

@@ -34,7 +34,7 @@
 }
 .section.blog-content .blog-post-list .card .thumbnail-img {
     width: 180px;
-    background-color: antiquewhite;
+    background-color: rgb(245, 245, 245);
 }
 .section.blog-content .blog-post-list .card .description {
     padding: .8rem 1rem;
@@ -150,7 +150,7 @@
         grid-template-columns: 1fr;
         grid-template-areas: "main"
                              "sub";
-        margin-top: 0rem;
+        margin: 0rem 1rem;
     }
 
     .section.blog-content .blog-post-list .card {
@@ -172,7 +172,7 @@
         grid-template-columns: 1fr;
         grid-template-areas: "main"
                              "sub";
-        margin-top: 1rem;
+        margin: 1rem 7% 0;
     }
 
     .section.blog-content .blog-post-list .card {

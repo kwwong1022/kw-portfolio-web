@@ -18,6 +18,7 @@
     <!-- End Google Tag Manager (noscript) -->
     
     <!-- navbar -->
+    <div id="curr-page"><%= page %></div>
     <%- include(rootDir + 'partials/navbar.ejs') %>
 
     <!-- banner sketch here: -->
@@ -32,63 +33,8 @@
                 <%- include(rootDir + 'components/blog-filter.ejs') %>
 
                 <!-- blog-post list component -->
-                <div class="blog-post-list">
-                    <a href="/blog/post" class="card fade-in">
-                        <div class="content">
-                            <div class="thumbnail-img"></div>
-                            <div class="description">
-                                <div class="title">Dummy Blog Post</div>
-                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
-                                <div class="date">01-02-2022</div>
-                            </div>
-                        </div>
-                        <div class="mask"></div>
-                    </a>
-                    <a href="/blog/post" class="card fade-in">
-                        <div class="content">
-                            <div class="thumbnail-img"></div>
-                            <div class="description">
-                                <div class="title">Dummy Blog Post</div>
-                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
-                                <div class="date">01-02-2022</div>
-                            </div>
-                        </div>
-                        <div class="mask"></div>
-                    </a>
-                    <a href="/blog/post" class="card fade-in">
-                        <div class="content">
-                            <div class="thumbnail-img"></div>
-                            <div class="description">
-                                <div class="title">Dummy Blog Post</div>
-                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
-                                <div class="date">01-02-2022</div>
-                            </div>
-                        </div>
-                        <div class="mask"></div>
-                    </a>
-                    <a href="/blog/post" class="card fade-in">
-                        <div class="content">
-                            <div class="thumbnail-img"></div>
-                            <div class="description">
-                                <div class="title">Dummy Blog Post</div>
-                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
-                                <div class="date">01-02-2022</div>
-                            </div>
-                        </div>
-                        <div class="mask"></div>
-                    </a>
-                    <a href="/blog/post" class="card fade-in">
-                        <div class="content">
-                            <div class="thumbnail-img"></div>
-                            <div class="description">
-                                <div class="title">Dummy Blog Post</div>
-                                <div class="content-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam praesentium, culpa, aut adipisci ab explicabo quasi non beatae itaque excepturi numquam assumenda nostrum voluptate autem magni temporibus esse. Blanditiis, esse.</div>
-                                <div class="date">01-02-2022</div>
-                            </div>
-                        </div>
-                        <div class="mask"></div>
-                    </a>
-                </div>
+                <div class="blog-post-list"></div>
+                
                 <div class="page-selector">
                     <div class="btn previous"><span>&lt;</span></div>
                     <div class="btn page active"><span>1</span></div>
@@ -107,51 +53,11 @@
                 <!-- popular post -->
                 <div class="popular-post fade-in">
                     <div style="font-size: 1.2rem; margin: 0 0 1.1rem; padding: 0 0 1.25rem; border-bottom: 1px solid rgba(0, 0, 0, .05); color: rgba(0, 0, 0, .8)">Popular Posts</div>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
                 </div>
 
                 <!-- recent post -->
                 <div class="recent-post fade-in">
                     <div style="font-size: 1.2rem; margin: 4rem 0 1.1rem; padding: 0 0 1.1rem; border-bottom: 1px solid rgba(0, 0, 0, .05); color: rgba(0, 0, 0, .8)">Recent Posts</div>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
-                    <a class="post-item" href="/blog/post">
-                        <div class="title">Dummy Blog Post</div>
-                        <div class="date">01-02-2022</div>
-                    </a>
                 </div>
 
             </div>
@@ -163,5 +69,7 @@
 
     <!-- script -->
     <script src= "./components/blog/blog-banner-sketch.js"></script>
+    <script src= "./components/blog/blog-sub-content.js"></script>
+    <script src= "./components/blog/blog-main-content.js"></script>
 </body>
 </html>
