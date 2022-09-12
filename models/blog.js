@@ -4,7 +4,6 @@ const BlogSchema = new mongoose.Schema({
     status: {
         type: String,
         required: [true, 'status cannot be blank'],
-        unique: true
     },
     type: {
         type: String,

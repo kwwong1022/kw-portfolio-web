@@ -73,8 +73,8 @@ router.post('/user/create', async (req, res) => {
             modificationTime: Date.now(),
             email: email
         })
-        console.log('create user successful');
         await user.save();
+        console.log('create user successful');
         console.log('saved user data to mongoDB');
 
         res.redirect('/cms');
@@ -92,34 +92,52 @@ router.post('/user', async (req, res) => {
         if (user && user.role == 'Admin') {
             const allUsers = await User.find();
             res.json( allUsers );
-        } else {
-            console.log('no permission to retrieve user data');
-        }
+        } else { console.log('no permission to retrieve user data') }
+
     } catch (err) {
         console.log('server error: ' + err);
+        res.sendStatus(401);
     }
 });
 
 /** CMS APIs - Blog **/
 //  create blog post
-router.post('/blog', async (req, res) => {
+router.post('/blog-post/create', async (req, res) => {
+    const { status, type, title, description, tags } = req.body;
+    console.log(`${status}, ${type}, ${title}, ${description}, ${tags}`);
+
     const blog = new Blog({
-        title: "testing",
-        description: "testing"
+        status: status,
+        type: type,
+        title: title,
+        description: description,
+        tags: tags,
+        creationTime: Date.now(),
+        modificationTime: Date.now()
     });
-    try { await blog.save();
-    } catch { console.log() }
+    try { 
+        await blog.save();
+        console.log('create blog post successful' );
+        console.log('saved blog post data to mongoDB');
+        console.log(blog);
+        res.sendStatus(200);
+
+    } catch(err) { 
+        console.log('create user failed' + err) 
+        res.sendStatus(401);
+    }
 });
 
 // read blog post
 router.post('/blog-post', async (req, res) => {
-    const userId = req.session.user_id;
-    const user = await User.findOne({ _id: userId });
+    // const userId = req.session.user_id;
+    // const user = await User.findOne({ _id: userId });
     try {
         const allPosts = await Blog.find();
         res.json( allPosts );
     } catch (err) {
         console.log('server error: ' + err);
+        res.sendStatus(401);
     }
 });
 

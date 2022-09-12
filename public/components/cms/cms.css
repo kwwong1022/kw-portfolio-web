@@ -51,10 +51,15 @@ th, td {
 th {
     font-weight: 450;
     background-color: rgb(243, 243, 243);
+    cursor: default;
 }
 td {
     border-bottom: 1px solid rgba(0, 0, 0, .07);
     transition: all 50ms ease-in;
+    cursor: pointer;
+}
+tr:hover {
+    background-color: rgba(0, 0, 0, .15);
 }
 .scrollable-x {
     overflow-x: scroll;

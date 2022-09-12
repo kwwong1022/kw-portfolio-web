@@ -4,9 +4,9 @@
             <div>Status</div>
             <div class="input" style="width: 100%; margin-top: .5rem;">
                 <select name="status" id="status" placeholder="Please select" required>
-                    <option value="draft">Draft</option>
-                    <option value="published">Published</option>
-                    <option value="unpublished">Un-published</option>
+                    <option value="Draft">Draft</option>
+                    <option value="Published">Published</option>
+                    <option value="Unpublished">Un-published</option>
                 </select>
             </div>
         </div>
@@ -15,9 +15,9 @@
             <div>Type</div>
             <div class="input" style="width: 100%; margin-top: .5rem;">
                 <select name="type" id="type" placeholder="Please select" required>
-                    <option value="study">Study</option>
-                    <option value="tutorial">Tutorial</option>
-                    <option value="work">Work</option>
+                    <option value="Study">Study</option>
+                    <option value="Tutorial">Tutorial</option>
+                    <option value="Work">Work</option>
                 </select>
             </div>
         </div>
@@ -40,7 +40,7 @@
             <div>Tags</div>
             <div style="display: flex; align-items: center; width: 100%;">
                 <div class="input" style="margin-bottom: .4rem; width: auto; display: flex; flex-direction: row; justify-content: left; align-items: center; width: fit-content; margin-top: .5rem;">
-                    <input type="text" name="type" id="type" placeholder="Please enter">
+                    <input type="text" name="tag" id="tag" placeholder="Please enter">
                 </div>
                 <div class="button" style="padding: 0.5rem 1.5rem 0.55rem; margin-right: 1rem;" onclick="alert()"><span>Add</span></div>
             </div>
@@ -59,7 +59,7 @@
         <div class="btn-new-content-block"></div>
         
         <div style="display: flex; margin-top: 1.7rem;">
-            <div class="button" style="padding: 0.5rem 1.5rem 0.55rem; margin-right: 1rem;" onclick="alert()"><span>Submit</span></div>
+            <div class="button" style="padding: 0.5rem 1.5rem 0.55rem; margin-right: 1rem;" onclick="createBlogPost()"><span>Submit</span></div>
         </div>
     </form>
 </div>
