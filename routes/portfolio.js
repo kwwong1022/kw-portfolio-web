@@ -1,5 +1,5 @@
 const express = require('express');
-
+const Blog = require('../models/blog.js');
 const router = express.Router();
 
 
@@ -20,10 +20,24 @@ router.get('/blog', (req, res) => {
     const page = "blog";
     res.render('blog.ejs', {page});
 });
-router.get('/blog/post', (req, res) => {
+router.get('/blog/:id', async (req, res) => {
     const page = "blog-post";
-    // postId
-    res.render('blog-post.ejs', {page});
+    const id = req.params.id;
+
+    try {
+        const blog = await Blog.findById({ _id: id });
+        
+        if (blog) {
+            const title = blog.title;
+            res.render('blog-post.ejs', { page, id, title });
+        } else {
+            console.log('blog post not found')
+            res.redirect('/blog');
+        }
+    } catch (err) {
+        console.log('server error: ' + err)
+        res.redirect('/blog');
+    }
 });
 router.get('/works', async (req, res) => {
     const page = "works";

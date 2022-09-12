@@ -1,3 +1,7 @@
+#blog-id {
+    display: none;
+}
+
 .section.blog-content .main-content .post-title {
     width: 100%;
     border-bottom: solid 1px rgba(0, 0, 0, .15);
@@ -26,7 +30,7 @@
 }
 .section.blog-content .main-content .tag {
     color: rgba(0, 0, 0, .6);
-    margin: .5rem .3rem 1.2rem 0;
+    margin: .5rem .5rem 1.2rem 0;
     padding: .2rem .7rem .1rem;
     font-size: .9rem;
     border-radius: 1rem; box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -37,6 +41,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 4rem;
 }
 
 .section.blog-content .main-content .post-content {

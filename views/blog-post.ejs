@@ -8,13 +8,13 @@
     <%- include(rootDir + 'partials/head.ejs') %>
     <link rel="stylesheet" href="/components/blog/blog.css">
     <link rel="stylesheet" href="/components/blog/blog-post.css">
-    <!-- <link rel="stylesheet" href="/components/common/walker-background-sketch.css"> -->
-    <title>"blog-post-name" | Kenneth Wong</title>
+    <title><%= title %> | Kenneth Wong</title>
 </head>
 
 <body>
     <!-- navbar -->
     <div id="curr-page"><%= page %></div>
+    <div id="blog-id"><%= id %></div>
     <%- include(rootDir + 'partials/navbar.ejs') %>
 
     <!-- banner sketch here: -->
@@ -25,20 +25,16 @@
             <!-- main content -->
             <div class="main-content fade-in">
                 <div class="post-title">
-                    <span class="title">Dummy Post Title Here</span>
-                    <span class="date">5 August, 2022</span>
+                    <span class="title"></span>
+                    <span class="date"></span>
                 </div>
 
                 <!-- tags -->
-                <div class="tags">
-                    <div class="tag">dummy tag</div>
-                    <div class="tag">dummy tag</div>
-                    <div class="tag">dummy tag</div>
-                </div>
+                <div class="tags"></div>
 
                 <!-- content -->
                 <div class="post-content-list">
-                    <div class="post-content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis temporibus porro provident obcaecati eveniet perspiciatis nulla iste voluptatem recusandae est voluptate expedita, ipsam id culpa vitae? Deserunt ad quasi ipsum!</div>
+                    <div class="post-content"></div>
                 </div>
             </div>
 
@@ -53,7 +49,6 @@
                 <div class="recent-post fade-in">
                     <div style="font-size: 1.2rem; margin: 4rem 0 1.1rem; padding: 0 0 1.1rem; border-bottom: 1px solid rgba(0, 0, 0, .05); color: rgba(0, 0, 0, .8)">Recent Posts</div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -64,5 +59,6 @@
     <!-- script -->
     <script src= "/components/blog/blog-banner-sketch.js"></script>
     <script src= "/components/blog/blog-sub-content.js"></script>
+    <script src= "/components/blog/blog-post.js"></script>
 </body>
 </html>

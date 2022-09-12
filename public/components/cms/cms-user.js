@@ -10,8 +10,8 @@ const fetchUser = () => {
         tds.forEach(el => el.parentNode.removeChild(el));
         data.forEach((user, i) => {
             const tr = document.createElement('tr');
-            tr.setAttribute('onclick', `window.location='/';`);
-            tr.setAttribute('id', user._id);
+            // tr.setAttribute('onclick', `window.location='/';`);
+            // tr.setAttribute('id', user._id);
             let td = document.createElement('td');
             td.innerText = user.username;
             tr.appendChild(td);

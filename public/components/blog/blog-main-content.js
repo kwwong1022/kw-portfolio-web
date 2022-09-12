@@ -1,8 +1,11 @@
 // load post list
 const fetchBlogPostListing = () => {
+    let data = new URLSearchParams();
+    data.append('status', 'Published');
+
     fetch("/blog-post", {
         method: "post",
-        body: {}
+        body: data
     })
     .then((res) => res.json())
     .then((data) => { 
@@ -10,7 +13,7 @@ const fetchBlogPostListing = () => {
         data.forEach((blog, i) => {
             const postItem = document.createElement('a');
             postItem.classList.add('card');
-            postItem.href = `/blog/post`;
+            postItem.href = `/blog/${blog._id}`;
             const postContent = document.createElement('div');
             postContent.classList.add('content');
             const itemMask = document.createElement('div');

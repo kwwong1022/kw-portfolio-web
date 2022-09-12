@@ -43,21 +43,14 @@
                 <div class="input" style="margin-bottom: .4rem; width: auto; display: flex; flex-direction: row; justify-content: left; align-items: center; width: fit-content; margin-top: .5rem;">
                     <input type="text" name="tag" id="tag" placeholder="Please enter">
                 </div>
-                <div class="button" style="padding: 0.5rem 1.5rem 0.55rem; margin-right: 1rem;" onclick="alert()"><span>Add</span></div>
-            </div>
-            
-        </div>
-        <div class="scrollable-x" style="width: 100%; max-width: 100%; display: flex; margin-bottom: 1.5rem;">
-            <!-- tags here -->
-            <div class="tag" style="display: flex; border-radius: 15px; background-color: rgb(253, 253, 253); padding: .2rem .8rem; font-size: .9rem; margin-right: .5rem;">
-                <span style="margin-right: .5rem; color: rgba(0, 0, 0, .7); white-space: nowrap; cursor: default;">dummy tag</span>
-                <div class="btn-close" style="color: rgba(0, 0, 0, .7); cursor: pointer;">x</div>
+                <div class="button tag" style="padding: 0.5rem 1.5rem 0.55rem; margin-right: 1rem;"><span>Add</span></div>
             </div>
         </div>
+        <div class="tag-list scrollable-x" style="width: 100%; max-width: 100%; display: flex; margin-bottom: 1.5rem;"></div>
 
-        <div class="content-container"></div>
+        <div class="content-container" style="margin-bottom: 1.5rem;"></div>
 
-        <div class="btn-new-content-block"></div>
+        <div class="btn-new-content-block" style="margin-bottom: 1.5rem;"></div>
         
         <div style="display: flex; margin-top: 1.7rem;">
             <div class="button" style="padding: 0.5rem 1.5rem 0.55rem; margin-right: 1rem;" onclick="createBlogPost()"><span>Submit</span></div>

@@ -43,6 +43,7 @@ table {
     border-spacing: 0;
 }
 th, td {
+    border-bottom: 1px solid rgba(0, 0, 0, .07);
     padding: 1rem .5rem 1rem;
     font-size: 14px;
     font-weight: 400;
@@ -54,12 +55,11 @@ th {
     cursor: default;
 }
 td {
-    border-bottom: 1px solid rgba(0, 0, 0, .07);
     transition: all 50ms ease-in;
     cursor: pointer;
 }
 tr:hover {
-    background-color: rgba(0, 0, 0, .15);
+    background-color: rgba(0, 0, 0, .05);
 }
 .scrollable-x {
     overflow-x: scroll;
@@ -204,6 +204,27 @@ tr:hover {
 }
 .cms-section.current, .cms-form.current {
     display: block;
+}
+
+
+/* cms-form : for blog-post only */
+.cms-form.blog-post .tag-list .tag-item {
+    display: flex; 
+    border-radius: 15px; 
+    background-color: rgb(253, 253, 253); 
+    padding: .2rem .8rem; 
+    font-size: .9rem; 
+    margin-right: .5rem;
+}
+.cms-form.blog-post .tag-list span {
+    margin-right: .5rem; 
+    color: rgba(0, 0, 0, .7); 
+    white-space: nowrap; 
+    cursor: default;
+}
+.cms-form.blog-post .tag-list .btn-close {
+    color: rgba(0, 0, 0, .7); 
+    cursor: pointer;
 }
 
 

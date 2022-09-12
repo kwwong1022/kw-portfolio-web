@@ -135,13 +135,37 @@ router.post('/blog-post/create', async (req, res) => {
 router.post('/blog-post', async (req, res) => {
     // const userId = req.session.user_id;
     // const user = await User.findOne({ _id: userId });
-    try {
-        const allPosts = await Blog.find();
-        res.json( allPosts );
-    } catch (err) {
-        console.log('server error: ' + err);
-        res.sendStatus(401);
+    const blogId = req.body.id;
+    const status = req.body.status;
+
+    if (blogId) {
+        // retrieve a specfic blog post
+        try {
+            const blog = await Blog.find({ _id: blogId });
+            console.log(blog);
+            res.json( blog );
+        } catch (err) {
+            console.log('server error: ' + err);
+            res.sendStatus(401);
+        }
+
+    } else {
+        try {
+            if (status) {
+                // front-end
+                const allBlogs = await Blog.find({ status }).sort({creationTime: -1}).limit(5);
+                res.json(allBlogs);
+            } else {
+                // cms
+                const allBlogs = await Blog.find().sort({creationTime: -1});
+                res.json(allBlogs);
+            }
+        } catch (err) {
+            console.log('server error: ' + err);
+            res.sendStatus(401);
+        }
     }
+    
 });
 
 // update blog post

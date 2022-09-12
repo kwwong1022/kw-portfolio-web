@@ -1,3 +1,30 @@
+let blogTags = [];
+
+const tagInput = document.querySelector('.cms-form.blog-post #tag');
+const tagEnter = document.querySelector('.cms-form.blog-post .button.tag');
+const tagList = document.querySelector('.cms-form.blog-post .tag-list');
+tagEnter.addEventListener('click', () => {
+    blogTags.push(tagInput.value);
+    tagInput.value = "";
+    updateTagList();
+})
+
+const updateTagList = () => {
+    tagList.innerHTML = "";
+    blogTags.forEach(t => {
+        const tagItem = document.createElement('div');
+        const tagSpan = document.createElement('span');
+        const btnTagClose = document.createElement('div');
+        tagItem.classList.add('tag-item');
+        tagSpan.innerText = t;
+        btnTagClose.innerText = 'x';
+        btnTagClose.classList.add('btn-close');
+        tagItem.appendChild(tagSpan);
+        tagItem.appendChild(btnTagClose);
+        tagList.appendChild(tagItem);
+    })
+}
+
 const fetchBlogPost = () => {
     fetch("/blog-post", {
         method: "post",
@@ -10,7 +37,7 @@ const fetchBlogPost = () => {
         tds.forEach(el => el.parentNode.removeChild(el));
         data.forEach((post, i) => {
             const tr = document.createElement('tr');
-            tr.setAttribute('onclick', `window.location='/';`);
+            // tr.setAttribute('onclick', `window.location='/';`);
             let td = document.createElement('td');
             td.innerText = post.status;
             tr.appendChild(td);
@@ -38,7 +65,8 @@ const createBlogPost = () => {
     const postType = document.querySelector('.cms-form.blog-post #type').value;
     const postTitle = document.querySelector('.cms-form.blog-post #title').value;
     const postDescription = document.querySelector('.cms-form.blog-post #description').value;
-    const postTags = JSON.stringify(['dummy tag 1', 'dummy tag 2', 'dummy tag 3']);
+
+    const postTags = JSON.stringify(blogTags);
 
     data.append("status", postStatus);
     data.append("type", postType);

@@ -1,8 +1,11 @@
 // load popular posts
 const fetchPopularBlogPost = () => {
+    let data = new URLSearchParams();
+    data.append('status', 'Published');
+
     fetch("/blog-post", {
         method: "post",
-        body: {}
+        body: data
     })
     .then((res) => res.json())
     .then((data) => { 
@@ -10,7 +13,7 @@ const fetchPopularBlogPost = () => {
         data.forEach((blog, i) => {
             const postItem = document.createElement('a');
             postItem.classList.add('post-item');
-            postItem.href = '#';
+            postItem.href = `/blog/${blog._id}`;
             const postTitle = document.createElement('div');
             postTitle.classList.add('title');
             postTitle.innerText = blog.title;
@@ -27,9 +30,12 @@ const fetchPopularBlogPost = () => {
 
 // load recent posts
 const fetchRecentBlogPost = () => {
+    let data = new URLSearchParams();
+    data.append('status', 'Published');
+
     fetch("/blog-post", {
         method: "post",
-        body: {}
+        body: data
     })
     .then((res) => res.json())
     .then((data) => { 
@@ -37,7 +43,7 @@ const fetchRecentBlogPost = () => {
         data.forEach((blog, i) => {
             const postItem = document.createElement('a');
             postItem.classList.add('post-item');
-            postItem.href = '#';
+            postItem.href = `/blog/${blog._id}`;
             const postTitle = document.createElement('div');
             postTitle.classList.add('title');
             postTitle.innerText = blog.title;
