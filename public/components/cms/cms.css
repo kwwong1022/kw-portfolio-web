@@ -37,6 +37,9 @@ button span, .button span {
     font-size: 14px;
     color: white;
 }
+textarea:focus {
+    outline: none;
+}
 
 /* table */
 table {
