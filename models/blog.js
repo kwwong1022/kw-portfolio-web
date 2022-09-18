@@ -21,6 +21,9 @@ const BlogSchema = new mongoose.Schema({
         type: [String],
         required: false
     },
+    data: {
+        type: Array
+    },
     views: {
         type: Number,
         required: false

@@ -229,6 +229,45 @@ tr:hover {
     color: rgba(0, 0, 0, .7); 
     cursor: pointer;
 }
+/* cms-form : content block */
+.cms-form.blog-post .content-block {
+    border-radius: 10px; 
+    background-color: white; 
+    padding: 1rem; 
+    margin-bottom: 1rem;
+}
+.cms-form.blog-post .content-info {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 1rem;
+}
+.cms-form.blog-post .menu {
+    display: flex; 
+    align-items: center;
+}
+.cms-form.blog-post #type {
+    cursor: pointer;
+}
+.cms-form.blog-post .btn-close-menu {
+    margin: 0 .5rem 0 1rem;
+}
+.cms-form.blog-post textarea {
+    min-width: 100%; 
+    min-height: 300px; 
+    border-radius: 2px; 
+    border: 1px solid rgba(0, 0, 0, .25); 
+    margin: 0 0 .5rem; padding: .5rem; 
+    vertical-align: top;
+}
+.cms-form.blog-post .sketch-setting {
+    display: flex;
+}
+.cms-form.blog-post #sketch-width, .cms-form.blog-post #sketch-height {
+    border: 1px solid rgba(0, 0, 0, .4); 
+    width: 50px; 
+    margin: 0 1rem 0 .4rem;
+}
 
 
 @media (max-width: 576px) {

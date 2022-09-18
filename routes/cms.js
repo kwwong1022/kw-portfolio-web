@@ -103,7 +103,7 @@ router.post('/user', async (req, res) => {
 /** CMS APIs - Blog **/
 //  create blog post
 router.post('/blog-post/create', async (req, res) => {
-    const { status, type, title, description, tags } = req.body;
+    const { status, type, title, description, tags, data } = req.body;
     console.log(`${status}, ${type}, ${title}, ${description}, ${tags}`);
     console.log(typeof(tags));
     console.log(tags);
@@ -114,6 +114,7 @@ router.post('/blog-post/create', async (req, res) => {
         title: title,
         description: description,
         tags: JSON.parse(tags),
+        data: JSON.parse(data),
         views: 0,
         creationTime: Date.now(),
         modificationTime: Date.now()
@@ -126,8 +127,8 @@ router.post('/blog-post/create', async (req, res) => {
         res.sendStatus(200);
 
     } catch(err) { 
-        console.log('create user failed' + err) 
-        res.sendStatus(401);
+        console.log('create blog post failed' + err) 
+        res.sendStatus(400);
     }
 });
 

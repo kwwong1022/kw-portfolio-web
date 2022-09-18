@@ -49,44 +49,35 @@
         <div class="tag-list scrollable-x" style="width: 100%; max-width: 100%; display: flex; margin-bottom: 1.5rem;"></div>
 
         <div class="content-container" style="margin-bottom: 1.5rem;">
-            <div class="content-block" style="border-radius: 10px; background-color: white; padding: 1rem; margin-bottom: 1rem;">
-                <div class="content-info" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+            <!-- <div class="content-block">
+                <div class="content-info">
                     <span>Content block #1</span>
-                    <div style="display: flex; align-items: center;">
-                        <select name="type" id="type" placeholder="Please select" required>
+                    <div class="menu">
+                        <select id="type">
                             <option value="text">text</option>
                             <option value="image">image</option>
                             <option value="code">code</option>
                             <option value="html">html</option>
                             <option value="p5">p5</option>
                         </select>
-                        <i class="fas fa-times btn-close-menu" style="margin: 0 .5rem 0 1rem;"></i>
+                        <i class="fas fa-times btn-close-menu"></i>
                     </div>
                 </div>
-                <!-- <div class="input-area" style="background-color: grey; width: 100%; height: 200px"></div> -->
-                <textarea style="min-width: 100%; height: 200px; border-radius: 2px; border: 1px solid rgba(0, 0, 0, .25); margin: 0 0 .5rem; padding: .5rem; vertical-align: top;"></textarea>
-            </div>
+    
+                <textarea></textarea>
 
-            <div class="content-block" style="border-radius: 10px; background-color: white; padding: 1rem; margin-bottom: 1rem;">
-                <div class="content-info" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <span>Content block #1</span>
-                    <div style="display: flex; align-items: center;">
-                        <select name="type" id="type" placeholder="Please select" required>
-                            <option value="text">text</option>
-                            <option value="image">image</option>
-                            <option value="code">code</option>
-                            <option value="html">html</option>
-                            <option value="p5">p5</option>
-                        </select>
-                        <i class="fas fa-times btn-close-menu" style="margin: 0 .5rem 0 1rem;"></i>
-                    </div>
+                <div class="scrollable-x sketch-setting">
+                    <label>Width:</label>
+                    <input type="number" id="sketch-width" value="-1">
+                    <label>Height:</label>
+                    <input type="number" id="sketch-height" value="400">
                 </div>
-                <!-- <div class="input-area" style="background-color: grey; width: 100%; height: 200px"></div> -->
-                <textarea style="min-width: 100%; height: 200px; border-radius: 2px; border: 1px solid rgba(0, 0, 0, .25); margin: 0 0 .5rem; padding: .5rem; vertical-align: top;"></textarea>
-            </div>
+            </div> -->
+
+            <!-- <div id="code-testing" style="width: 400px; height: 300px"></div> -->
         </div>
 
-        <div class="button new-content-block" style="margin-bottom: 1.5rem; width: 100%; display: flex; justify-content: center;" onclick="alert()"><span>Create new content block</span></div>
+        <div class="button new-content-block" style="margin-bottom: 1.5rem; width: 100%; display: flex; justify-content: center;"><span>Create new content block</span></div>
         
         <div style="display: flex; margin-top: 2.5rem;">
             <div class="button" style="padding: 0.5rem 1.5rem 0.55rem; margin-right: 1rem;" onclick="createBlogPost()"><span>Submit</span></div>

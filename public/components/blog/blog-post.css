@@ -46,4 +46,11 @@
 
 .section.blog-content .main-content .post-content {
     width: 100%;
+    min-height: 100px;
+}
+.section.blog-content .main-content .post-content.text {
+    margin-bottom: 1rem;
+}
+.section.blog-content .main-content .post-content.p5 {
+    margin: 1rem 0;
 }

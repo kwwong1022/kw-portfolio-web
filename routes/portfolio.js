@@ -21,7 +21,7 @@ router.get('/blog', (req, res) => {
     res.render('blog.ejs', {page});
 });
 router.get('/blog/:id', async (req, res) => {
-    const page = "blog-post";
+    const page = "blog";
     const id = req.params.id;
 
     try {

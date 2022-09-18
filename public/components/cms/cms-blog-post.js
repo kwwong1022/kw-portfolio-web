@@ -59,20 +59,48 @@ const fetchBlogPost = () => {
     .catch((err) => { console.log(err); });
 }
 
+const getFormContentAll = () => {
+    const contents = document.querySelectorAll('.cms-form.blog-post .content-block');
+    let data = [];
+
+    contents.forEach(content => {
+        // get block-id
+        const blockId = content.id;
+
+        const type = document.querySelector(`#${blockId} #type`).value;
+        const cont = document.querySelector(`#${blockId} textarea`).value;
+        const width = document.querySelector(`#${blockId} #sketch-width`).value;
+        const height = document.querySelector(`#${blockId} #sketch-height`).value;
+        
+        data.push({
+            id: content.id,
+            type: type,
+            content: cont,
+            width: width,
+            height: height
+        });
+    });
+
+    return data;
+}
+
 const createBlogPost = () => {
     let data = new URLSearchParams();
     const postStatus = document.querySelector('.cms-form.blog-post #status').value;
     const postType = document.querySelector('.cms-form.blog-post #type').value;
     const postTitle = document.querySelector('.cms-form.blog-post #title').value;
     const postDescription = document.querySelector('.cms-form.blog-post #description').value;
-
     const postTags = JSON.stringify(blogTags);
+    // content blocks
+    const postContents = JSON.stringify(getFormContentAll());
+    console.log(postContents);
 
     data.append("status", postStatus);
     data.append("type", postType);
     data.append("title", postTitle);
     data.append("description", postDescription);
     data.append("tags", postTags);
+    data.append("data", postContents);
     
     fetch("/blog-post/create", {
         method: "post",
