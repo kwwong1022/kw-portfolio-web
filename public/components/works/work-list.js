@@ -28,7 +28,7 @@ let workList = [
         description: "Digital Drawing, Procreate",
         image: ["/assets/works/work-drawing-march-3-2021.jpg"],
         category: "drawing",
-        url: "#",
+        url: "/blog/6330467dfdd0eeb976572421",
         date: {year: 2022, month: 2}
     },
     {
@@ -36,7 +36,7 @@ let workList = [
         description: "Digital Drawing, Procreate",
         image: ["/assets/works/work-drawing-march-4-2021.jpg"],
         category: "drawing",
-        url: "#",
+        url: "/blog/6330467dfdd0eeb976572421",
         date: {year: 2022, month: 2}
     },
     {
@@ -100,24 +100,24 @@ let workList = [
         description: "Drawing, Sketching, Charcoal",
         image: ["/assets/works/work-drawing-january-15.jpg"],
         category: "drawing",
-        url: "#",
-        date: {year: 2022, month: 2}
+        url: "/blog/63304e71f5855d5eaaec6078",
+        date: {year: 2022, month: 1}
     },
     {
         title: "Charcoal Sketching",
         description: "Drawing, Sketching, Charcoal",
         image: ["/assets/works/work-drawing-january-14.jpg"],
         category: "drawing",
-        url: "#",
-        date: {year: 2022, month: 2}
+        url: "/blog/63304e71f5855d5eaaec6078",
+        date: {year: 2022, month: 1}
     },
     {
         title: "Charcoal Sketching",
         description: "Drawing, Sketching, Charcoal",
         image: ["/assets/works/work-drawing-january-13.jpg"],
         category: "drawing",
-        url: "#",
-        date: {year: 2022, month: 2}
+        url: "/blog/63304e71f5855d5eaaec6078",
+        date: {year: 2022, month: 1}
     },
     {
         title: "Health Assitant Device",

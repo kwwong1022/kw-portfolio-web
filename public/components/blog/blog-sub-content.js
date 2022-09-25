@@ -28,7 +28,7 @@ const fetchPopularBlogPost = () => {
 
 // load recent posts
 const fetchRecentBlogPost = () => {
-    fetch(`/api/blogpost?limit=7&current=0&sortType=&status=Published&type=`, {
+    fetch(`/api/blogpost?limit=7&current=0&sortType=desc&status=Published&type=`, {
         method: "get",
         headers: { 'x-api-key': '766c3500-df40-46f9-adf0-8f537b8963ce' }
     })
