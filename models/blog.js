@@ -13,6 +13,9 @@ const BlogSchema = new mongoose.Schema({
         type: String,
         required: [true, 'title cannot be blank']
     },
+    thumbnail: {
+        type: String
+    },
     description: {
         type: String,
         required: false

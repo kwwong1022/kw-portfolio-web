@@ -1,15 +1,14 @@
 // load post list
-const fetchBlogPostListing = () => {
-    let data = new URLSearchParams();
-    data.append('status', 'Published');
-
-    fetch("/blog-post", {
-        method: "post",
-        body: data
+const fetchBlogPostListing = (type) => {
+    fetch(`/api/blogpost?limit=7&current=0&sortType=desc&status=Published&type=${type}`, {
+        method: "get",
+        headers: { 'x-api-key': '766c3500-df40-46f9-adf0-8f537b8963ce' }
     })
     .then((res) => res.json())
     .then((data) => { 
+        data = data.data;
         const blogPostList = document.querySelector('.blog-content .main-content .blog-post-list');
+        blogPostList.innerHTML = '';
         data.forEach((blog, i) => {
             const postItem = document.createElement('a');
             postItem.classList.add('card');
@@ -20,6 +19,7 @@ const fetchBlogPostListing = () => {
             itemMask.classList.add('mask');
             const postThumbnail = document.createElement('div');
             postThumbnail.classList.add('thumbnail-img');
+            if (blog.thumbnail) postThumbnail.style.backgroundImage = `url("${blog.thumbnail}")`;
             const postDescription = document.createElement('div');
             postDescription.classList.add('description');
             const postTitle = document.createElement('div');
@@ -45,4 +45,4 @@ const fetchBlogPostListing = () => {
     .catch((err) => { console.log(err); });
 }
 
-fetchBlogPostListing();
+fetchBlogPostListing('');

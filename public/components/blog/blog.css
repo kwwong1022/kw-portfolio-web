@@ -35,6 +35,9 @@
 .section.blog-content .blog-post-list .card .thumbnail-img {
     width: 180px;
     background-color: rgb(245, 245, 245);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px 0 0 5px;
 }
 .section.blog-content .blog-post-list .card .description {
     padding: .8rem 1rem;
@@ -77,7 +80,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1.5rem 0 5rem;
+    margin: 1.5rem 0 6rem;
 }
 .section.blog-content .page-selector .btn {
     cursor: pointer;
@@ -141,6 +144,13 @@
 }
 .section.blog-content .post-item .title:hover, .section.blog-content .popular-post .post-item .date:hover {
     color: rgba(0, 0, 0, 1);
+}
+
+.scrollable-x {
+    overflow-x: scroll;
+}
+.scrollable-x::-webkit-scrollbar {
+    display: none;
 }
 
 

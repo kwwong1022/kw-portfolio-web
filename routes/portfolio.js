@@ -1,25 +1,30 @@
 const express = require('express');
 const Blog = require('../models/blog.js');
+const { StatusCodes } = require('http-status-codes');
+
 const router = express.Router();
 
 
-// public routes
 router.get('/', (req, res) => {
     const page = "home";
-    res.render('home.ejs', {page});
+    res.status(StatusCodes.OK).render('home.ejs', {page});
 });
+
 router.get('/home', (req, res) => {
     const page = "home";
-    res.render('home.ejs', {page});
+    res.status(StatusCodes.OK).render('home.ejs', {page});
 });
+
 router.get('/about', (req, res) => {
     const page = "about";
-    res.render('about.ejs', {page});
+    res.status(StatusCodes.OK).render('about.ejs', {page});
 });
+
 router.get('/blog', (req, res) => {
     const page = "blog";
-    res.render('blog.ejs', {page});
+    res.status(StatusCodes.OK).render('blog.ejs', {page});
 });
+
 router.get('/blog/:id', async (req, res) => {
     const page = "blog";
     const id = req.params.id;
@@ -29,24 +34,30 @@ router.get('/blog/:id', async (req, res) => {
         
         if (blog) {
             const title = blog.title;
-            res.render('blog-post.ejs', { page, id, title });
+            res.status(StatusCodes.OK).render('blog-post.ejs', { page, id, title });
         } else {
-            console.log('blog post not found')
-            res.redirect('/blog');
+            console.log(`blog post "${id}" not found. redirecting to "/blog"`);
+            res.status(StatusCodes.NOT_FOUND).render('404.ejs');
         }
     } catch (err) {
-        console.log('server error: ' + err)
-        res.redirect('/blog');
+        console.log(`internal server error: error${err}`);
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+            message: 'internal server error',
+            success: false,
+            data: null
+        });
     }
 });
+
 router.get('/works', async (req, res) => {
     const page = "works";
     const work = req.query.work;
-    res.render('works.ejs', {page, work});
+    res.status(StatusCodes.OK).render('works.ejs', {page, work});
 });
+
 router.get('/contact', (req, res) => {
     const page = "contact";
-    res.render('contact.ejs', {page});
+    res.status(StatusCodes.OK).render('contact.ejs', {page});
 });
 
 

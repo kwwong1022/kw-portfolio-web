@@ -1,5 +1,5 @@
 <div class="cms-content filter" style="padding: 2rem 1.5rem;">
-    <form action="/user/create" method="POST">
+    <form>
         <div class="scrollable-x" style="display: flex;">
             <div class="input">
                 <input type="text" name="username" id="username" placeholder="User name" required>
@@ -18,7 +18,7 @@
         </div>
         
         <div style="display: flex; margin-top: 1.7rem;">
-            <button><span>Create user</span></button>
+            <div class="button" onclick="createUser()"><span>Create user</span></div>
         </div>
     </form>
 </div>

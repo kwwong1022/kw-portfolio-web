@@ -26,12 +26,13 @@ const updateTagList = () => {
 }
 
 const fetchBlogPost = () => {
-    fetch("/blog-post", {
-        method: "post",
-        body: {}
+    fetch(`/api/blogpost`, {
+        method: "get",
+        headers: { 'x-api-key': '766c3500-df40-46f9-adf0-8f537b8963ce' }
     })
     .then((res) => res.json())
     .then((data) => { 
+        data = data.data;
         const table = document.querySelector('.cms-section.blog-post table');
         const tds = document.querySelectorAll('.cms-section.blog-post td');
         tds.forEach(el => el.parentNode.removeChild(el));
@@ -102,8 +103,9 @@ const createBlogPost = () => {
     data.append("tags", postTags);
     data.append("data", postContents);
     
-    fetch("/blog-post/create", {
+    fetch("/api/blogpost", {
         method: "post",
+        headers: { 'x-api-key': '766c3500-df40-46f9-adf0-8f537b8963ce' },
         body: data
     })
     .then((res) => res.status)

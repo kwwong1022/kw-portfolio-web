@@ -1,14 +1,12 @@
 // load popular posts
 const fetchPopularBlogPost = () => {
-    let data = new URLSearchParams();
-    data.append('status', 'Published');
-
-    fetch("/blog-post", {
-        method: "post",
-        body: data
+    fetch(`/api/blogpost?limit=7&current=0&sortType=desc&status=Published&type=&sortView=true`, {
+        method: "get",
+        headers: { 'x-api-key': '766c3500-df40-46f9-adf0-8f537b8963ce' }
     })
     .then((res) => res.json())
     .then((data) => { 
+        data = data.data;
         const popularBlogPostSection = document.querySelector('.blog-content .sub-content .popular-post');
         data.forEach((blog, i) => {
             const postItem = document.createElement('a');
@@ -30,15 +28,13 @@ const fetchPopularBlogPost = () => {
 
 // load recent posts
 const fetchRecentBlogPost = () => {
-    let data = new URLSearchParams();
-    data.append('status', 'Published');
-
-    fetch("/blog-post", {
-        method: "post",
-        body: data
+    fetch(`/api/blogpost?limit=7&current=0&sortType=&status=Published&type=`, {
+        method: "get",
+        headers: { 'x-api-key': '766c3500-df40-46f9-adf0-8f537b8963ce' }
     })
     .then((res) => res.json())
     .then((data) => { 
+        data = data.data;
         const recentBlogPostSection = document.querySelector('.blog-content .sub-content .recent-post');
         data.forEach((blog, i) => {
             const postItem = document.createElement('a');

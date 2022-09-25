@@ -1,10 +1,29 @@
-const fetchUser = () => {
-    fetch("/user", {
+const createUser = () => {
+    const data = new URLSearchParams();
+    data.append('username', document.querySelector('.main-content .cms-section.user #username').value);
+    data.append('password', document.querySelector('.main-content .cms-section.user #password').value);
+    data.append('role', document.querySelector('.main-content .cms-section.user #role').value);
+    data.append('email', document.querySelector('.main-content .cms-section.user #email').value);
+
+    fetch("/api/user", {
         method: "post",
-        body: {}
+        headers: { 'x-api-key': '766c3500-df40-46f9-adf0-8f537b8963ce' },
+        body: data
+    })
+    .then((res) => {
+        fetchUser();
+    })
+    .catch((err) => { console.log(err); });
+}
+
+const fetchUser = () => {
+    fetch("/api/users", {
+        method: "get",
+        headers: { 'x-api-key': '766c3500-df40-46f9-adf0-8f537b8963ce' }
     })
     .then((res) => res.json())
     .then((data) => { 
+        data = data.data;
         const table = document.querySelector('.cms-section.user table');
         const tds = document.querySelectorAll('.cms-section.user td');
         tds.forEach(el => el.parentNode.removeChild(el));

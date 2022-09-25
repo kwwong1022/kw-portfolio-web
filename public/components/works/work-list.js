@@ -68,7 +68,7 @@ let workList = [
         description: "Creative Coding, P5js",
         image: ["/assets/works/work-composition-w-red-blue-yellow-and-drunk.jpg"],
         category: "creative-coding",
-        url: "https://observablehq.com/@kwwong1022/assignment-3",
+        url: "/blog/63273cd281f3c04653231a86",
         date: {year: 2022, month: 2}
     },
     {
@@ -84,7 +84,7 @@ let workList = [
         description: "Creative Coding, P5js",
         image: ["/assets/works/work-fractal-tree.jpg"],
         category: "creative-coding",
-        url: "https://observablehq.com/@kwwong1022/week-3",
+        url: "/blog/632744ceb61ca3d9481a9f19",
         date: {year: 2022, month: 2}
     },
     {
