@@ -2,7 +2,6 @@
 const toggler = document.querySelector('.toggler');
 const nav = document.querySelector('.nav');
 let isNavHide = true;
-
 const toggleNavbar = () => {
     if (!isNavHide) {
         nav.classList.remove('show');
@@ -15,7 +14,6 @@ const toggleNavbar = () => {
     }
     isNavHide = !isNavHide;
 }
-
 toggler.addEventListener('click', () => {
     toggleNavbar();
 })
@@ -30,7 +28,6 @@ userInfo.addEventListener('mouseenter', () => {
 userMenu.addEventListener('mouseleave', () => {
     userMenu.classList.remove('show');
 })
-
 userInfo.addEventListener('click', () => {
     if (userMenu.classList.contains('show')) {
         userMenu.classList.remove('show');
@@ -50,7 +47,7 @@ const mainContentSections = document.querySelectorAll('.cms-section');
 const mainContentUser = document.querySelectorAll('.cms-section.user');
 const mainContentBlogPost = document.querySelectorAll('.cms-section.blog-post');
 const forms = document.querySelectorAll('.cms-form');
-
+// func: to return current listing option
 const getCurrListing = (el, validListingArr) => {
     let curr = el.innerText;
     let isListingValid = false;
@@ -61,14 +58,14 @@ const getCurrListing = (el, validListingArr) => {
 
     return isListingValid? curr.toLowerCase() : 'user';
 }
-
+// func: to update ui focus on cms nav
 const updateNavFocus = (currListing) => {
     navItems.forEach(item => {
         item.classList.remove('current');
         if (item.classList.contains(currListing)) item.classList.add('current');
     });
 }
-
+// func: to update display based on current listing option
 const updateListingVisibility = (currListing) => {
     mainContentTitle.innerText = currListing.charAt(0).toUpperCase() + currListing.slice(1);
 
@@ -77,14 +74,11 @@ const updateListingVisibility = (currListing) => {
         if (section.classList.contains(currListing)) section.classList.add('current');
     })
 }
-
-
-// init UI
-let currListing = getCurrListing(document.querySelector('#curr-listing'), listingOptions);
-updateNavFocus(currListing);
-updateListingVisibility(currListing);
-
-// init main content
+// func: to hide all main content
+const hideMainContentAll = () => {
+    mainContentSections.forEach(section => section.classList.remove('current'));
+}
+// func: to update display content based on current listing option
 const initMainContent = (currListing) => {
     switch (currListing) {
         case 'user':
@@ -95,9 +89,28 @@ const initMainContent = (currListing) => {
             break;
     }
 }
-initMainContent(currListing);
+// - func: to show content form
+const showContentForm = (isNewForm, id) => {
+    // hide all main content
+    hideMainContentAll();
+    // show form based on current listing
+    switch (currListing) {
+        case 'blog-post':
+            showBlogContentForm(isNewForm, id);
+            break;
+    }
+}
 
-// update main content
+
+// init
+// - check current listing option first
+let currListing = getCurrListing(document.querySelector('#curr-listing'), listingOptions);
+// init - UI: check current listing option, update ui display accordingly
+updateNavFocus(currListing);
+updateListingVisibility(currListing);
+// init - Content
+initMainContent(currListing);
+// init - add onclick logic to navItems
 navItems.forEach(item => {
     item.addEventListener('click', () => {
         // update current listing var
@@ -113,16 +126,3 @@ navItems.forEach(item => {
         forms.forEach(form => form.classList.remove('current'));
     });
 });
-
-// update create new content form
-const blogPostForm = document.querySelector('.cms-form.blog-post');
-const showNewContentForm = () => {
-    // hide all main content
-    mainContentSections.forEach(section => section.classList.remove('current'));
-    // show form based on current listing
-    switch (currListing) {
-        case 'blog-post':
-            blogPostForm.classList.add('current');
-            break;
-    }
-}

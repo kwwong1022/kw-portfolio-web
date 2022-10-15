@@ -26,6 +26,13 @@ app.use(require('./routes/cms'));
 // APIs
 app.use('/api', require('./routes/api/index.js'));
 
+app.get('/privacy-policy', (req, res) => {
+    res.status(StatusCodes.OK).render('privacy-policy.ejs');
+});
+app.get('/terms-and-conditions', (req, res) => {
+    res.status(StatusCodes.OK).render('terms.ejs');
+});
+
 // files
 app.get('/get-file/cv', (req, res) => {
     res.status(StatusCodes.OK).sendFile('Kai_Fung_Wong_-_Front-end_Developer.pdf', { root: path.join(__dirname, './public/assets/about/') });

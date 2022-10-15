@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://kwwdev.com/</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/about</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/works?work=mobile-app</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/works?work=website</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/works?work=graphic</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/works?work=creative-coding</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/works?work=3d-modelling</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/works?work=drawing</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/works?work=arduino</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/works?work=tool</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/works</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/blog</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/contact</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/terms-and-conditions</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kwwdev.com/privacy-policy</loc>
+  <lastmod>2022-09-25T19:05:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
