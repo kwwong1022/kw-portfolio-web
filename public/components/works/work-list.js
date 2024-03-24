@@ -1,5 +1,13 @@
 let workList = [
     {
+        title: "Kws WebTools",
+        description: "Online web tools, AI, Cloud",
+        image: ["/assets/works/work-kws-web-tools.png"],
+        category: "website",
+        url: "http://www.kwssys.com",
+        date: {year: 2023, month: 1}
+    },
+    {
         title: "GPX Visuzlization",
         description: "GPX file to Zwift Info Card Video",
         image: ["/assets/works/work-gpx-visualization.png"],
