@@ -61,7 +61,7 @@
 
 /* education section */
 .section.education {
-    margin: 0 0 8rem;
+    margin: 0 0 10rem;
     z-index: 3;
 }
 .section.education .college {
@@ -81,7 +81,7 @@
 
 /* work experience section */
 .section.work-experience {
-    margin: 0 0 10rem;
+    margin: 0 0 8rem;
     z-index: 3;
 }
 .section.work-experience .work {
@@ -128,6 +128,9 @@
     }
 
     /* education section */
+    .section.education {
+        margin: 0 0 8rem;
+    }
     .section.education .college { 
         padding: 0 2rem 0;
     }
@@ -137,9 +140,6 @@
     }
 
     /* work experience section */
-    .section.work-experience {
-        margin: 0 0 8rem;
-    }
     .section.work-experience .work {
         padding: 0 2rem 0;
     }

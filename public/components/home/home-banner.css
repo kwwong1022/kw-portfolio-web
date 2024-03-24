@@ -326,6 +326,9 @@
 .experience-content-half .card-info:hover {
     background-color: rgb(240, 240, 240); 
 }
+.education {
+    margin: 0 0 2rem;
+}
 
 @media (max-width: 576px) {
     .home-banner .title-content {
@@ -454,6 +457,9 @@
         background-color: rgb(255, 255, 255); 
         border-radius: 0 5px 5px 0;
     }
+    .card-content-experience .education {
+        margin: 4rem 0 2rem;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -562,6 +568,9 @@
     .card-content-experience .experience-content-half {
         display: flex; 
     }
+    .card-content-experience .education {
+        margin: 3rem 0 2rem;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -587,8 +596,8 @@
     .home-banner .card-content-about .main-container-2 .kw-icon {
         background-image: url("https://avatars.githubusercontent.com/u/67175089?v=4");
         background-size: cover;
-        width: 11.5rem; 
-        height: 11.5rem; 
+        width: 9.5rem; 
+        height: 9.5rem; 
         margin: 0 0 0 1rem; 
         border-radius: 50%; 
         box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
