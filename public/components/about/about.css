@@ -79,6 +79,23 @@
     margin-right: 1rem;
 }
 
+/* certifications section */
+.section.certifications {
+    margin: 0 0 8rem;
+    z-index: 3;
+}
+.section.certifications .cert {
+    display: flex; 
+    justify-content: left; 
+    width: 100%; 
+    margin-top: 1rem; 
+    padding: 0 4rem 0;
+}
+.section.certifications .cert .img {
+    width: 116px; height: 70px; 
+    margin-right: 1rem;
+}
+
 /* work experience section */
 .section.work-experience {
     margin: 0 0 8rem;
