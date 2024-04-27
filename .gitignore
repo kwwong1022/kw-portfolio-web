@@ -2,3 +2,5 @@
 .gcloudignore
 node_modules
 public/assets
+*.pem
+.DS_Store

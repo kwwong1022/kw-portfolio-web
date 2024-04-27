@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const session = require('express-session');
 const path = require("path");
 const { StatusCodes } = require('http-status-codes');
+require('dotenv').config()
 
 const app = express();
 const PORT = process.env.PORT || 8080;
